@@ -1,2 +1,2 @@
 # cnzw-wtw.github.io
-CNZW
+<p src="QR.png"><a href="http://cnzw-wtw.github.io"></a></p>
