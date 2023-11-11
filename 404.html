@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<body>
+    <style>
+        body {
+            background-image: url('/404.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-attachment: fixed;
+        }
+    </style>
+</body><!--背景图片-->
+</html>
+<head>
+    <meta charset="UTF-8">
+    <title>404 NOT FOUND - CNZW</title>
+</head><!--标题-->
+<link rel="icon" href="/TB.png" type="image/png"><!--图标-->
+<center>
+    <div>
+        <a href="/"><img src="/CNZW.png" width=" 300" title="114514" /></a><br />
+    </div><!--回到主页-->
+</center>
+<button><b>当前时间：</b><b id="time"></b><noscript><b style="color:red;"><strong>你的浏览器不支持或已禁用JavaScript</strong></b></noscript><!--noscript--></button>
+<button onclick="copyText()" title="114514">复制CNZW网址</button>
+<script>
+    function copyText() {
+        // 获取要复制的文本
+        var textToCopy = "https://cnzw-wtw.github.io";
+
+        // 创建一个新的文本区域元素，并将要复制的文本设置为其值
+        var textArea = document.createElement("textarea");
+        textArea.value = textToCopy;
+
+        // 将新的文本区域元素添加到文档中
+        document.body.appendChild(textArea);
+
+        // 选择文本区域元素的内容，并复制到剪贴板
+        textArea.select();
+        document.execCommand("copy");
+
+        // 删除添加的文本区域元素
+        document.body.removeChild(textArea);
+    }
+</script>
+<center>
+    <footer>
+        <a href="https://space.bilibili.com/3493132140284888" target="_blank" title="114514"><font size="5" color="white">>网站作者的bilibili<</font></a><!--B-->
+    </footer>
+</center>
+<hr color="white" size="3" />
+<noscript>
+    <center><p style="color:red;background-color:white;"><strong>你的浏览器不支持或已禁用JavaScript</strong></p></center>
+</noscript><!--noscript-->
+<center>
+    <font color="red" size="6"><h1><strong>404 NOT FOUND</strong></h1></font><br />
+    <font size="5" color="red">
+        <p><strong>文件已被删除、已更名或暂时不可用。</strong></p>
+    </font>
+    <a href="/" style="color:white;font-size:45px">返回CNZW主页</a>
+</center>
+<body>
+    <script>
+        function showTime() {
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            var ampm = hours >= 12 ? 'pm' : 'am';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            var time = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+            document.getElementById("time").innerHTML = time;
+            setTimeout(showTime, 1); // 更新时间每秒一次
+        }
+        showTime();
+    </script>
+</body>
+<center>
+    <footer>
+        <hr color="white" size="3"/>
+        <b style="font-size:17px;color:black;background-color:white;"><strong>Copyright&copy; <b id="Y"></b>&nbsp;CNZW. All Right Reserved</strong></b>
+        <hr color="white" size="3" />
+        <script>
+            var currentYear = new Date().getFullYear();
+            document.getElementById("Y").innerHTML = currentYear;
+        </script>
+    </footer>
+</center><!--copyright-->
