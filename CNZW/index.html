@@ -29,21 +29,12 @@
 <button onclick="copyText()" title="114514">复制CNZW网址</button>
 <script>
     function copyText() {
-        // 获取要复制的文本
         var textToCopy = "https://cnzw-wtw.github.io";
-
-        // 创建一个新的文本区域元素，并将要复制的文本设置为其值
         var textArea = document.createElement("textarea");
         textArea.value = textToCopy;
-
-        // 将新的文本区域元素添加到文档中
         document.body.appendChild(textArea);
-
-        // 选择文本区域元素的内容，并复制到剪贴板
         textArea.select();
         document.execCommand("copy");
-
-        // 删除添加的文本区域元素
         document.body.removeChild(textArea);
     }
 </script>
@@ -52,20 +43,19 @@
     <center><p style="color:red;background-color:white;"><strong>你的浏览器不支持或已禁用JavaScript</strong></p></center>
 </noscript><!--noscript-->
 <!---->
-<p style="font-size:25px">1.<a href="/-">其它</a></p>
-
+<p style="font-size:25px"><a href="/MC">我的Minecraft服务器</a></p>
 
 <!---->
 <center>
     <footer>
         <hr color="black" size="3" />
-        <a href="https://github.com/CNZW-WTW/" target="_blank" title="GitHub:@CNZW-WTW"><img src="https://img.shields.io/badge/GitHub-CNZW--WTW-black" alt="@GitHub" style="block-size:20px" /></a>
+        <a href="https://github.com/CNZW-WTW/" target="_blank" title="GitHub:@CNZW-WTW"><img src="https://img.shields.io/badge/GitHub-CNZW--WTW-black" alt="@GitHub" /></a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://space.bilibili.com/3493132140284888?spm_id_from=333.337.0.0/" target="_blank" title="Bilibili:@满级人类WTW"><img src="https://img.shields.io/badge/bilibili-满级人类WTW-blue" alt="@bilibili" style="block-size:20px" /></a>
+        <a href="https://space.bilibili.com/3493132140284888?spm_id_from=333.337.0.0/" target="_blank" title="Bilibili:@满级人类WTW"><img src="https://img.shields.io/badge/bilibili-满级人类WTW-blue" alt="@bilibili" /></a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://twitter.com/CNZW_WTW" target="_blank" title="Twitter:@CNZW_WTW"><img src="https://img.shields.io/badge/Twitter-CNZW--WTW-black" alt="@twitter" style="block-size:20px" /></a>
+        <a href="https://twitter.com/CNZW_WTW" target="_blank" title="Twitter:@CNZW_WTW"><img src="https://img.shields.io/badge/Twitter-CNZW--WTW-black" alt="@twitter" /></a>
         <br>
-        <b style="font-size:17px;color:black"><strong>Copyright&copy; <b id="Y"></b>&nbsp;CNZW. All Right Reserved</strong></b>
+        <b style="font-size:17px;color:black"><strong>Copyright&copy; 2023-<b id="Y"></b>&nbsp;CNZW. All Right Reserved</strong></b>
         <hr color="black" size="3" />
         <script>
             var currentYear = new Date().getFullYear();
