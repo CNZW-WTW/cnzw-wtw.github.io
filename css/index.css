@@ -14,3 +14,7 @@ body {
     text-decoration: none;
     border-radius: 10px;
 }
+#copyright{
+    font-size: 17px;
+    color: black;
+}
