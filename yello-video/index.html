@@ -19,13 +19,16 @@
         <p id="text-2">未满18岁禁止进入！</p>
         <a href="https://player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&p=1&autoplay&danmaku=false&t=0" class="yello-video-link" id="link-1" onclick="NBPL()">同意进入！</a>
         <br>
-        <a href="/" class="yello-video-link" id="link-2">未满18岁，离开！</a>
+        <a href="/" class="yello-video-link" id="link-2" onclick="exit()">未满18岁，离开！</a>
     </center>
     <br>
 </div>
 <script>
-    function NBPL(){
+    function NBPL() {
         alert("你被骗了！！！")
+    }
+    function exit() {
+        alert("页面将重定向至 / 根目录")
     }
 </script>
 <style>
