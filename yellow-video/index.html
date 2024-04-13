@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>精彩视频 - CNZW</title>
+    <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png">
+    <div id="CNZW-live2d">
+        <script src="/live2d-widget/autoload.js"></script>
+    </div>
+</head>
+<body>
+<noscript>
+    <center><p style="background-color: white;color: red;"><strong>你的浏览器不支持或已禁用JavaScript</strong></p></center>
+</noscript>
+<!---->
+<div id="body" name="body">
+    <center>
+        <p id="text-1" onclick="">警告！包含成人内容，请谨慎观看!</p>
+        <p id="text-2" onclick="year18()">未满18岁禁止进入！</p>
+        <a href="https://player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&p=1&autoplay&danmaku=false&t=0" class="yello-video-link" id="link-1" onclick="NBPL()">同意进入！</a>
+        <br>
+        <a href="/" class="yello-video-link" id="link-2" onclick="exit()">未满18岁，离开！</a>
+    </center>
+    <br>
+</div>
+<script>
+    var CW114 = new Audio('/audio/114514.mp3')
+    function year18() {
+        alert('满18岁也不能进！');
+        CW114.play();
+    }
+    function NBPL() {
+        alert("你被骗了！！！");
+    }
+    function exit() {
+        alert("页面将重定向至 / 根目录");
+    }
+</script>
+<style>
+    body{
+        background-color: rgb(255, 0, 212);
+    }
+    #body{
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    #text-1{
+        font-size: 50px;
+        color: rgb(100, 100, 100);
+    }
+    #text-2{
+        font-size: 30px;
+        color: rgb(100, 100, 100);
+    }
+    .yello-video-link{
+        color: white;
+        font-size: 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        background-color: rgb(255, 0, 212);
+        padding: 15px 30px;
+        display: block;
+        margin-left: 130px;
+        margin-right: 130px;
+    }
+    #copyright{
+        font-size: 25px;
+    }
+    #cwfl{
+        text-decoration: none;
+        color: black;
+    }
+</style>
+<!---->
+<center>
+    <footer id="footer">
+        <br>
+        <b id="copyright"><strong>Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;<a href="/" title="CNZW" target="_blank" id="cwfl">CNZW</a>. All Right Reserved</strong></b>
+        <script>
+            var currentYear = new Date().getFullYear();
+            document.getElementById("Y").innerHTML = currentYear;
+        </script>
+    </footer>
+</center>
+</body>
+</html>
