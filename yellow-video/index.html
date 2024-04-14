@@ -5,7 +5,7 @@
     <title>精彩视频 - CNZW</title>
     <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png">
     <div id="CNZW-live2d">
-        <script src="/live2d-widget/autoload.js"></script>
+        <script src="/js/live2d-widget/autoload.js"></script>
     </div>
 </head>
 <body>
@@ -13,7 +13,9 @@
     <center><p style="background-color: white;color: red;"><strong>你的浏览器不支持或已禁用JavaScript</strong></p></center>
 </noscript>
 <!---->
-<div id="body" name="body">
+<div id="d1">
+</div>
+<div id="body">
     <center>
         <p id="text-1" onclick="">警告！包含成人内容，请谨慎观看!</p>
         <p id="text-2" onclick="year18()">未满18岁禁止进入！</p>
@@ -26,14 +28,14 @@
 <script>
     var CW114 = new Audio('/audio/114514.mp3')
     function year18() {
-        alert("满18岁也不能进哦！");
+        alert("满18岁也不能进哦！   -- CNZW");
         CW114.play();
     }
     function NBPL() {
-        alert("你被骗了！！！");
+        alert("你被骗了！！！   -- CNZW");
     }
     function exit() {
-        alert("页面将重定向至 / 根目录");
+        alert("页面将重定向至 / 根目录   -- CNZW");
     }
 </script>
 <style>
@@ -45,6 +47,7 @@
         border-radius: 10px;
         margin-left: 80px;
         margin-right: 80px;
+        margin-top: 50px;
     }
     #text-1{
         font-size: 50px;
