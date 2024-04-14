@@ -19,23 +19,29 @@
     <center>
         <p id="text-1" onclick="">警告！包含成人内容，请谨慎观看!</p>
         <p id="text-2" onclick="year18()">未满18岁禁止进入！</p>
-        <a href="https://player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&p=1&autoplay&danmaku=false&t=0" class="yello-video-link" id="link-1" onclick="NBPL()">同意进入！</a>
+        <a class="yello-video-link" id="link-1" onclick="NBPL()">同意进入！</a>
         <br>
-        <a href="/" class="yello-video-link" id="link-2" onclick="exit()">未满18岁，离开！</a>
+        <a class="yello-video-link" id="link-2" onclick="exit()">未满18岁，离开！</a>
     </center>
     <br>
 </div>
 <script>
     var CW114 = new Audio('/audio/114514.mp3')
     function year18() {
-        alert("满18岁也不能进哦！   -- CNZW");
         CW114.play();
+        alert("满18岁也不能进哦！   -- CNZW");
     }
     function NBPL() {
+        window.location.href = 'https://player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&p=1&autoplay&danmaku=false&t=0';
         alert("你被骗了！！！   -- CNZW");
     }
     function exit() {
+        window.location.href = '/';
         alert("页面将重定向至 / 根目录   -- CNZW");
+    }
+    function CNZW() {
+        window.location.href = '/';
+        alert("Welcome browser CNZW homepage");
     }
 </script>
 <style>
@@ -80,7 +86,7 @@
 <center>
     <footer id="footer">
         <br>
-        <b id="copyright"><strong>Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;<a href="/" title="CNZW" target="_blank" id="cwfl">CNZW</a>. All Right Reserved</strong></b>
+        <b id="copyright"><strong>Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;<a title="CNZW" target="_blank" id="cwfl" onclick="CNZW()">CNZW</a>. All Right Reserved</strong></b>
         <script>
             var currentYear = new Date().getFullYear();
             document.getElementById("Y").innerHTML = currentYear;
