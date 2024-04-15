@@ -37,12 +37,19 @@
             <button id="cut" onclick="cut()">-</button>
             <button id="download" onclick="download()"><img src="/img/CNZW/download.png"  style="width: 13px;"></button>
             <progress id="cwp" value="0" max="219.15"></progress>
+            <br>
+            <b id="vdtmt"></b>
         </div>
     </center>
 </div>
 <style>
     #video{
         margin-top: 10px;
+    }
+    #vdtmt{
+        color: rgb(0, 255, 0);
+        background-color: black;
+        border-radius: 5px;
     }
 </style>
 <script>
@@ -71,9 +78,13 @@
         window.location.href = '/video/BadApple.mp4'
     };
     var  cwp = document.getElementById('cwp');
+    var vdtmt = document.getElementById('vdtmt');
     video.addEventListener('timeupdate', function() {
         if (cwp.value < 219) {
             cwp.value = video.currentTime;
+            cwp.innerHTML = video.currentTime;
+            let t0 = video.currentTime | 0;
+            vdtmt.innerHTML = '&nbsp;&nbsp;&nbsp;时间:&nbsp;' + t0 + '&nbsp;S&nbsp;&nbsp;&nbsp;';
         }else{
             cwp.value = 0;
         }
