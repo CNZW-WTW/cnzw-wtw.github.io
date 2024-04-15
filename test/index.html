@@ -28,11 +28,16 @@
     <center>
         <video src="/video/BadApple.mp4" id="video" class="border-radius" itemtype="mp4"></video>
         <br>
-        <button id="on" onclick="on()">ON</button>
-        <button id="off" onclick="off()">OFF</button>
-        <button id="off" onclick="play()">▶</button>
-        <button id="off" onclick="pause()">▐▐&nbsp;</button>
-        <button id="off" onclick="add()">+</button>
+        <div id="control">
+            <button id="on" onclick="on()">ON</button>
+            <button id="off" onclick="off()">OFF</button>
+            <button id="play" onclick="play()">▶</button>
+            <button id="pause" onclick="pause()">▐▐&nbsp;</button>
+            <button id="add" onclick="add()">+</button>
+            <button id="cut" onclick="cut()">-</button>
+            <button id="download" onclick="download()"><img src="/img/CNZW/download.png"  style="width: 13px;"></button>
+            <progress id="cwp" value="0" max="219.15"></progress>
+        </div>
     </center>
 </div>
 <style>
@@ -44,20 +49,35 @@
     var video = document.getElementById('video');
     function on() {
         video.style = '';
-    }
+    };
     function off() {
         video.style = 'display: none;';
-    }
+    };
     function play() {
         video.play();
-    }
+    };
     function pause() {
         video.pause();
-    }
+    };
     function add() {
-        video.currentTime = video.currentTime + 10;
+        video.currentTime = video.currentTime + 5;
         video.play();
-    }
+    };
+    function cut() {
+        video.currentTime = video.currentTime - 5;
+        video.play();
+    };
+    function download() {
+        window.location.href = '/video/BadApple.mp4'
+    };
+    var  cwp = document.getElementById('cwp');
+    video.addEventListener('timeupdate', function() {
+        if (cwp.value < 219) {
+            cwp.value = video.currentTime;
+        }else{
+            cwp.value = 0;
+        }
+    });
 </script>
 <!---->
 <center>
