@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
-    <title>精彩视频 - CNZW</title>
+    <title>精彩视频,高清直播，在线免费看，全国空降，上门服务 - CNZW</title>
     <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png">
     <div id="CNZW-live2d">
         <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
@@ -27,21 +27,23 @@
 </div>
 <script>
     var CW114 = new Audio('/audio/114514.mp3')
+    var url_1 = "https://player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&p=1&autoplay&danmaku=false&t=0";
+    var url_2 = "/";
     function year18() {
         CW114.play();
         alert("满18岁也不能进哦！   -- CNZW");
     }
     function NBPL() {
-        window.location.href = 'https://player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&p=1&autoplay&danmaku=false&t=0';
+        window.location.href(url_2);
+        window.open(url_1, '_blank');
         alert("你被骗了！！！   -- CNZW");
     }
     function exit() {
-        window.location.href = '/';
+        window.location.href()
         alert("页面将重定向至 / 根目录   -- CNZW");
     }
     function CNZW() {
         window.location.href = '/';
-        alert("Welcome browser CNZW homepage");
     }
 </script>
 <style>
