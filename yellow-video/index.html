@@ -7,6 +7,7 @@
     <div id="CNZW-live2d">
         <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
     </div>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
 <noscript>
@@ -19,9 +20,10 @@
     <center>
         <p id="text-1" onclick="">警告！包含成人内容，请谨慎观看!</p>
         <p id="text-2" onclick="year18()">未满18岁禁止进入！</p>
-        <a class="yello-video-link" id="link-1" onclick="NBPL()">同意进入！</a>
+        <a class="yellow-video-link" id="link-1" onclick="NBPL()">同意进入！</a>
         <br>
-        <a class="yello-video-link" id="link-2" onclick="exit()">未满18岁，离开！</a>
+        <a class="yellow-video-link" id="link-2" onclick="exit()">未满18岁，离开！</a>
+        <div class="h-captcha" data-sitekey="599dad18-927c-4002-ba32-3fb09f48696e"></div>
     </center>
     <br>
 </div>
@@ -34,13 +36,12 @@
         alert("满18岁也不能进哦！   -- CNZW");
     }
     function NBPL() {
-        window.location.href(url_2);
-        window.open(url_1, '_blank');
         alert("你被骗了！！！   -- CNZW");
+        window.location.href = url_1;
     }
     function exit() {
-        window.location.href()
         alert("页面将重定向至 / 根目录   -- CNZW");
+        window.location.href = url_2;
     }
     function CNZW() {
         window.location.href = '/';
@@ -65,7 +66,7 @@
         font-size: 30px;
         color: rgb(100, 100, 100);
     }
-    .yello-video-link{
+    .yellow-video-link{
         color: white;
         font-size: 30px;
         border-radius: 5px;
