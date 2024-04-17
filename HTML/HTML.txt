@@ -41,3 +41,31 @@
         if (jmax < Math.ceil(H / fontSize)) jmax++;
     }, 80);
 </script>
+
+
+//hCaptcha
+<script>
+    var onSubmit = function(token) {
+        document.getElementById('content').style.display = 'block';
+    };
+ 
+    var onError = function() {
+        console.error('Error occurred during captcha validation.');
+    };
+ 
+    window.onload = function() {
+        hcaptcha.render('hcaptcha', {
+            'sitekey': '5438f6cd-7c9c-43c7-a41b-de59ce3852be',
+            'callback': onSubmit,
+            'error-callback': onError
+        });
+    };
+<script>
+//id
+id="content"
+//box
+<form action="">
+    <div class="hcaptcha">
+        <div id="hcaptcha"></div>
+    </div>
+</form>
