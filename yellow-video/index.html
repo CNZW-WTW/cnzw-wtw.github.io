@@ -20,10 +20,9 @@
     <center>
         <p id="text-1" onclick="">警告！包含成人内容，请谨慎观看!</p>
         <p id="text-2" onclick="year18()">未满18岁禁止进入！</p>
-        <a class="yellow-video-link" id="content" onclick="NBPL()" style="display: none;">同意进入！</a>
-        <br>
+        <a class="yellow-video-link" id="content" onclick="NBPL()" style="display: none;">同意进入！</a>        <br>
         <a class="yellow-video-link" onclick="exit()">未满18岁，离开！</a>
-        <p id="text-3">↓↓↓请先验证你的人类身份↓↓↓</p>
+        <p id="text-3" style="color: white;">↓↓↓请先验证你的人类身份↓↓↓</p>
         <form action="">
             <div class="hcaptcha">
                 <div id="hcaptcha" data-sitekey="5438f6cd-7c9c-43c7-a41b-de59ce3852be"></div>
@@ -54,6 +53,8 @@
     //hCaptcha
     var onSubmit = function(token) {
         document.getElementById('content').style.display = '';
+        document.getElementById('text-3').innerHTML = '验证成功';
+        document.getElementById('text-3').style.color = 'rgb(0, 255, 0)';
     };
  
     var onError = function() {
@@ -89,6 +90,7 @@
     }
     #text-3{
         font-size: 30px;
+        background-color: black;
     }
     .yellow-video-link{
         color: white;
