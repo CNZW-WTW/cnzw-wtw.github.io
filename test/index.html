@@ -9,6 +9,7 @@
     <div id="CNZW-live2d">
         <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
     </div>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
 <div class="top" name="top">
@@ -26,7 +27,7 @@
 <!---->
 <div id="body" name="body">
     <center>
-        <video src="/video/BadApple.mp4" id="video" class="border-radius" itemtype="mp4"></video>
+        <video src="/video/BadApple.mp4" id="video" class="border-radius" itemtype="mp4" style="display: none;"></video>
         <br>
         <div id="control">
             <button id="on" onclick="on()">ON</button>
@@ -37,9 +38,17 @@
             <button id="cut" onclick="cut()">-</button>
             <button id="download" onclick="download()"><img src="/img/CNZW/download.png"  style="width: 13px;"></button>
             <progress id="cwp" value="0" max="219.15"></progress>
+            <button id="enter" onclick="enter()">ENTER</button>
             <br>
             <b id="vdtmt"></b>
         </div>
+        <br>
+        <b id="text-3" style="color: white;">&nbsp;↓↓↓请先验证你的人类身份↓↓↓&nbsp;</b>
+        <form action="">
+            <div class="hcaptcha">
+                <div id="hcaptcha" data-sitekey="5438f6cd-7c9c-43c7-a41b-de59ce3852be"></div>
+            </div>
+        </form>
     </center>
 </div>
 <style>
@@ -50,6 +59,11 @@
         color: rgb(0, 255, 0);
         background-color: black;
         border-radius: 5px;
+    }
+    #text-3{
+        font-size: 30px;
+        background-color: black;
+        border-radius: 50px;
     }
 </style>
 <script>
@@ -89,6 +103,24 @@
             cwp.value = 0;
         }
     });
+    //hCaptcha
+    var onSubmit = function(token) {
+        document.getElementById('video').style.display = '';
+        document.getElementById('text-3').innerHTML = '&nbsp;&nbsp;验证成功&nbsp;&nbsp;';
+        document.getElementById('text-3').style.color = 'rgb(0, 255, 0)';
+    };
+
+    var onError = function() {
+        console.error('Error occurred during captcha validation.');
+    };
+
+    window.onload = function() {
+        hcaptcha.render('hcaptcha', {
+            'sitekey': '5438f6cd-7c9c-43c7-a41b-de59ce3852be',
+            'callback': onSubmit,
+            'error-callback': onError
+        });
+    };
 </script>
 <!---->
 <center>
