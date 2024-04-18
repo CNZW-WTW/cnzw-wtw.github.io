@@ -43,7 +43,7 @@
             <b id="vdtmt"></b>
         </div>
         <br>
-        <b id="text-3" style="color: white;">&nbsp;↓↓↓请先验证你的人类身份↓↓↓&nbsp;</b>
+        <b id="text-3" style="color: white;" onclick="hct()">&nbsp;↓↓↓请先验证你的人类身份↓↓↓&nbsp;</b>
         <form action="">
             <div class="hcaptcha">
                 <div id="hcaptcha" data-sitekey="5438f6cd-7c9c-43c7-a41b-de59ce3852be"></div>
@@ -103,6 +103,16 @@
             cwp.value = 0;
         }
     });
+    function hct() {
+        var cht = document.getElementById('text-3');
+        if (cht.innerHTML == '&nbsp;↓↓↓请先验证你的人类身份↓↓↓&nbsp;') {
+            alert('你还没有进行人机验证!');
+        }else{
+            if (cht.innerHTML == '&nbsp;&nbsp;验证成功&nbsp;&nbsp;'){
+                alert('你已通过人机验证');
+            }
+        }
+    }
     //hCaptcha
     var onSubmit = function(token) {
         document.getElementById('video').style.display = '';
