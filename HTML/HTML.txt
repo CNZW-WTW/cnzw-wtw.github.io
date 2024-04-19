@@ -64,8 +64,4 @@
 //id
 id="content"
 //box
-<form action="">
-    <div class="hcaptcha">
-        <div id="hcaptcha"></div>
-    </div>
-</form>
+<div id="hcaptcha" data-sitekey=""></div>
