@@ -27,7 +27,7 @@
 <!---->
 <div id="body" name="body" style="display: none;">
     <center>
-        <h1 id="title">CNZW Studio Minecraft服务器规则</h1>
+        <h1 id="title"><span class="mc">CNZW Studio Minecraft</span>服务器规则</h1>
         <p id="ft">请仔细阅读CNZW服务器规则并牢记，否则可能会导致你在服务器内受到<span class="op">管理员</span>或<span class="op">服主</span>对你的<span class="mute">禁言</span>或<span class="ban">封号</span>等处理！！！</p>
         <b>服务器IP(Server IP)：bt1.furme.top</b>
         <br>
@@ -138,8 +138,18 @@
         background-color: black;
         border-radius: 3px;
     }
+    @font-face{
+        font-family: 'mc';
+        src: url('/ttf/MC.ttf');
+    }
+    .mc{
+        font-family: 'mc';
+    }
 </style>
 <script>
+    function msg() {
+        alert('联系请使用邮箱：cnzw-wtw@qq.com');
+    }
     //hCaptcha
     var onSubmit = function(token) {
         document.getElementById('body').style.display = '';
