@@ -1,6 +1,6 @@
 # [CNZW Studio](https://cnzw-wtw.github.io/)
 [![GitHub](/img/icon/github.png)](https://github.com/CNZW-WTW/)
-[![Bilibili](/img/icon/bilibili.png)]([https://github.com/CNZW-WTW/](https://space.bilibili.com/3493132140284888/))
+[![Bilibili](/img/icon/bilibili.png)](https://space.bilibili.com/3493132140284888/)
 [![X](/img/icon/twitter.png)](https://twitter.com/CNZW_WTW/)
 [![E-mail](/img/icon/email.png)](mailto:cnzw-wtw@qq.com)  
 ![Donate CNZW](/img/pay/donate.jpg)
