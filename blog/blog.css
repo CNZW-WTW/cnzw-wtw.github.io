@@ -1,0 +1,25 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-attachment: fixed;
+}
+#footer{
+    background-color: black;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 3px;
+}
+.cfl{
+    background-color: black;
+    margin-right: 50px;
+}
+#copyright{
+    font-size: 17px;
+    color: white;
+    margin-bottom: 15px;
+}
