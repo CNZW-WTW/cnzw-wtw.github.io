@@ -26,15 +26,24 @@
         changeBackground();
     </script>
 </head>
-<body>
+<body id="bd">
 <noscript>
     <center><p style="background-color: white;color: red;"><strong>你的浏览器不支持或已禁用JavaScript</strong></p></center>
 </noscript>
 <!---->
+<center>
+    <div id="head">
+        <center>
+            <img class="headimg" src="CNZW.jpg">
+            <h1 id="titname">CNZW</h1>
+        </center>
+    </div>
+</center>
 <div id="body" name="body">
 </div>
 <!---->
 <script>
+    //link
     var gh = 'https://github.com/CNZW-WTW/';
     var bl = 'https://space.bilibili.com/3493132140284888/';
     var x = 'https://twitter.com/CNZW_WTW';
@@ -55,21 +64,20 @@
 </script>
 <footer id="footer">
     <center>
-        <p id="cwflk">
-            <img src="/img/icon/github.png" id="cwflk-gh" class="cfl" onclick="cg()" title="Github:@CNZW-WTW" alt="Github:@CNZW-WTW" width="55">
-            <img src="/img/icon/bilibili.png" id="cwflk-bl" class="cfl" onclick="cb()" title="Bilibili:@CNZW" alt="Bilibili:@CNZW" width="55">
-            <img src="/img/icon/twitter.png" id="cwflk-x" class="cfl" onclick="cx()" title="X:@CNZW_WTW" alt="X:@CNZW_WTW" width="55">
-            <img src="/img/icon/email.png" id="cwflk-yt" class="" onclick="cem()" title="E-mail:cnzw-wtw@qq.com" alt="E-mail:cnzw-wtw@qq.com" width="55">
-        </p>
+        <img src="/img/icon/github.png" id="cwflk-gh" class="cfl" onclick="cg()" title="Github:@CNZW-WTW" alt="Github:@CNZW-WTW" width="55">
+        <img src="/img/icon/bilibili.png" id="cwflk-bl" class="cfl" onclick="cb()" title="Bilibili:@CNZW" alt="Bilibili:@CNZW" width="55">
+        <img src="/img/icon/twitter.png" id="cwflk-x" class="cfl" onclick="cx()" title="X:@CNZW_WTW" alt="X:@CNZW_WTW" width="55">
+        <img src="/img/icon/email.png" id="cwflk-yt" class="" onclick="cem()" title="E-mail:cnzw-wtw@qq.com" alt="E-mail:cnzw-wtw@qq.com" width="55">
         <p id="copyright">
             <strong>
                 Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;CNZW. All Right Reserved
             </strong>
         </p>
     </center>
-    <div></div>
     <script>
         var currentYear = new Date().getFullYear();
         document.getElementById("Y").innerHTML = currentYear;
     </script>
 </footer>
+</body>
+</html>
