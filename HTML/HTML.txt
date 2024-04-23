@@ -65,3 +65,27 @@
 id="content"
 //box
 <div id="hcaptcha" data-sitekey=""></div>
+
+
+
+<footer id="footer">
+    <center>
+        <div id="ftlk">
+            <br>
+            <img src="/img/icon/github.png" id="cwflk-gh" class="cfl" onclick="cg()" title="Github:@CNZW-WTW" alt="Github:@CNZW-WTW" width="55">
+            <img src="/img/icon/bilibili.png" id="cwflk-bl" class="cfl" onclick="cb()" title="Bilibili:@CNZW" alt="Bilibili:@CNZW" width="55">
+            <img src="/img/icon/twitter.png" id="cwflk-x" class="cfl" onclick="cx()" title="X:@CNZW_WTW" alt="X:@CNZW_WTW" width="55">
+            <img src="/img/icon/qq.png" id="cwflk-qq" class="cfl" onclick="cq()" title="QQ" alt="QQ" width="55">
+            <img src="/img/icon/email.png" id="cwflk-yt" class="" onclick="cem()" title="E-mail:cnzw-wtw@qq.com" alt="E-mail:cnzw-wtw@qq.com" width="55">
+        </div>
+        <p id="copyright">
+            <strong>
+                Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;CNZW. All Right Reserved
+            </strong>
+        </p>
+    </center>
+    <script>
+        var currentYear = new Date().getFullYear();
+        document.getElementById("Y").innerHTML = currentYear;
+    </script>
+</footer>
