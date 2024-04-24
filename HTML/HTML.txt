@@ -68,6 +68,31 @@ id="content"
 
 
 
+<script>
+    //link
+    var gh = 'https://github.com/CNZW-WTW/';
+    var bl = 'https://space.bilibili.com/3493132140284888/';
+    var x = 'https://twitter.com/CNZW_WTW';
+    var qq = 'tencent://message/?uin=1780614361';
+    var em = 'mailto:cnzw-wtw@qq.com';
+    function cg() {
+        window.open(gh, '_blank');
+    }
+    function cb() {
+        window.open(bl, '_blank');
+    }
+    function cx() {
+        window.open(x, '_blank');
+    }
+    function cq() {
+        alert('QQ: 1780614361');
+        window.open(qq, '_blank');
+    }
+    function cem() {
+        alert('联系我请使用邮箱: cnzw-wtw@qq.com');
+        window.open(em, '_blank');
+    }
+</script>
 <footer id="footer">
     <center>
         <div id="ftlk">
