@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>CNZW</title>
+    <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/border-radius.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <script src="https://cnzw-api.github.io/js/url.js"></script>
+    <div id="CNZW-live2d">
+        <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
+    </div>
+</head>
+<body>
+<div class="top" name="top">
+    <h1 class="top">
+        <a href="/"><img src="/img/CNZW/CNZW.png" width="250px" title="CNZW" /></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a  href="/" title="index" id="index" class="top">首页</a>
+        <b class="top">|</b>
+        <a  href="mailto:cnzw-wtw@qq.com?subject=反馈" id="mailto" class="top">反馈</a>
+    </h1>
+</div>
+<noscript>
+    <center><p style="background-color: white;color: red;"><strong>你的浏览器不支持或已禁用JavaScript</strong></p></center>
+</noscript>
+<!---->
+<div id="body" name="body">
+    <center>
+        <h1 id="title">Download</h1>
+        <img src="/img/CNZW/loading.gif" title="Loading" alt="Loading">
+        <b id="text">正在开始下载你的文件</b>
+        <p id="text-1">如果没有开始下载，请<a id="download" href="#" download>点击此处开始下载</a></p>
+        <br>
+    </center>
+</div>
+<!---->
+<script>
+    var d = getURL('d');
+    var download = document.getElementById('download');
+    download.href = d;
+</script>
+<script defer>
+    window.open(d, '_blank');
+</script>
+<!--body style-->
+<style>
+    #body{
+        margin-bottom: 15px;
+    }
+    #title{
+        background-image: url('/img/CNZW/color.png');
+        background-size: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+</style>
+<!---->
+<script>
+    //link
+    var gh = 'https://github.com/CNZW-WTW/';
+    var bl = 'https://space.bilibili.com/3493132140284888/';
+    var x = 'https://twitter.com/CNZW_WTW';
+    var qq = 'tencent://message/?uin=1780614361';
+    var em = 'mailto:cnzw-wtw@qq.com';
+    function cg() {
+        window.open(gh, '_blank');
+    }
+    function cb() {
+        window.open(bl, '_blank');
+    }
+    function cx() {
+        window.open(x, '_blank');
+    }
+    function cq() {
+        alert('QQ: 1780614361');
+        window.open(qq, '_blank');
+    }
+    function cem() {
+        alert('联系我请使用邮箱: cnzw-wtw@qq.com');
+        window.open(em, '_blank');
+    }
+</script>
+<footer id="footer">
+    <center>
+        <div id="ftlk">
+            <br>
+            <img src="/img/icon/github.png" id="cwflk-gh" class="cfl" onclick="cg()" title="Github:@CNZW-WTW" alt="Github:@CNZW-WTW" width="55">
+            <img src="/img/icon/bilibili.png" id="cwflk-bl" class="cfl" onclick="cb()" title="Bilibili:@CNZW" alt="Bilibili:@CNZW" width="55">
+            <img src="/img/icon/twitter.png" id="cwflk-x" class="cfl" onclick="cx()" title="X:@CNZW_WTW" alt="X:@CNZW_WTW" width="55">
+            <img src="/img/icon/qq.png" id="cwflk-qq" class="cfl" onclick="cq()" title="QQ" alt="QQ" width="55">
+            <img src="/img/icon/email.png" id="cwflk-yt" class="" onclick="cem()" title="E-mail:cnzw-wtw@qq.com" alt="E-mail:cnzw-wtw@qq.com" width="55">
+        </div>
+        <p id="copyright">
+            <strong>
+                Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;CNZW. All Right Reserved
+            </strong>
+        </p>
+    </center>
+    <script>
+        var currentYear = new Date().getFullYear();
+        document.getElementById("Y").innerHTML = currentYear;
+    </script>
+</footer>
+</body>
+</html>
