@@ -29,12 +29,16 @@
 <div id="body" name="body">
     <center>
         <h1 id="title">Download File</h1>
-        <img src="/img/CNZW/loading.gif" title="Loading" alt="Loading">
+        <img src="/img/CNZW/loading.gif" title="Loading" alt="Loading" id="loading">
         <b id="text">正在开始下载你的文件</b>
         <p id="text-1">如果没有开始下载，可能是参数错误导致找不到文件，或浏览器阻止JavaScript和弹出窗口，请<a id="download" href="#" download>点击此处开始下载</a></p>
         <br>
+        <marquee id="marquee">CNZW官网 - https://cnzw-wtw.github.io ##### GitHub - @CNZW-WTW ##### X - @CNZW_WTW ##### 哔哩哔哩 - @CNZW ##### 微信 - CNZWSTUDIO ##### QQ - 1780614361</marquee>
+        <br>
     </center>
 </div>
+<script>
+</script>
 <!--get file url-->
 <script>
     var d = getURL('d');
@@ -64,6 +68,16 @@
     @font-face{
         font-family: 'MC';
         src: url('/ttf/MC.ttf');
+    }
+    #marquee{
+        background-color: black;
+        color: rgb(0, 255, 0);
+        border-radius: 10px;
+        border-style: solid;
+        border-color: rgb(0, 255, 0);
+        border-width: 1px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 </style>
 <!---->
