@@ -24,11 +24,7 @@
         <a class="yellow-video-link" onclick="exit()">未满18岁，离开！</a>
         <br>
         <b id="text-3" style="color: white;" onclick="hct()">&nbsp;↓↓↓请先验证你的人类身份↓↓↓&nbsp;</b>
-        <form action="">
-            <div class="hcaptcha">
-                <div id="hcaptcha" data-sitekey="5438f6cd-7c9c-43c7-a41b-de59ce3852be"></div>
-            </div>
-        </form>
+        <div id="hcaptcha" data-sitekey="5438f6cd-7c9c-43c7-a41b-de59ce3852be"></div>
         <img id="imnar" src="imnar.jpg">
     </center>
     <br>
@@ -86,7 +82,8 @@
         background-color: rgb(255, 0, 212);
     }
     #body{
-        background-color: rgba(255, 255, 255, 0.8);
+        background-image: url('/img/-/KKLG.png');
+        background-size: 20%;
         border-radius: 10px;
         margin-left: 80px;
         margin-right: 80px;
@@ -94,11 +91,15 @@
     }
     #text-1{
         font-size: 50px;
-        color: rgb(100, 100, 100);
+        color: white;
+        background-image: url('/img/CNZW/color.png');
+        background-size: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
     #text-2{
         font-size: 30px;
-        color: rgb(100, 100, 100);
+        color: black;
     }
     #text-3{
         font-size: 30px;
