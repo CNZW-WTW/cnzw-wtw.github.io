@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <title>精彩视频,高清直播，在线免费看，全国空降，上门服务 - CNZW</title>
     <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png">
-    <div id="CNZW-live2d">
-        <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
-    </div>
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
 <noscript>
@@ -20,12 +16,17 @@
     <center>
         <p id="text-1" onclick="">警告！包含成人内容，请谨慎观看!</p>
         <p id="text-2" onclick="year18()">未满18岁禁止进入！</p>
-        <a class="yellow-video-link" id="content" onclick="NBPL()" style="display: none;">同意进入！</a>        <br>
+        <a class="yellow-video-link" id="content" onclick="NBPL()">同意进入！</a><br>
         <a class="yellow-video-link" onclick="exit()">未满18岁，离开！</a>
         <br>
-        <b id="text-3" style="color: white;" onclick="hct()">&nbsp;↓↓↓请先验证你的人类身份↓↓↓&nbsp;</b>
-        <div id="hcaptcha" data-sitekey="5438f6cd-7c9c-43c7-a41b-de59ce3852be"></div>
-        <img id="imnar" src="imnar.jpg">
+        <div id="yplink">
+            <a id="yp" href="https://mp.weixin.qq.com/s?__biz=MzIxNzgyNjkxMw==&mid=2247501094&idx=3&sn=5eab071338e412b4af6faeba98639093&chksm=97f15628a086df3e914d1340b3771b5892b0a0786629b963eb35898575b21269b77613845e46&scene=27" target="_blank"><img src="1.gif" id="gif1" class="yellow-img"></a>
+            <br>
+            <b class="about">
+                二次元，真人，动漫，CNZW应有尽有，资源一律免费，高清直播在线看，低延迟，任你随便看
+            </b>
+        </div>
+        <br>
     </center>
     <br>
 </div>
@@ -48,41 +49,13 @@
     function CNZW() {
         window.location.href = url_2;
     }
-    function hct() {
-        var cht = document.getElementById('text-3');
-        if (cht.innerHTML == '&nbsp;↓↓↓请先验证你的人类身份↓↓↓&nbsp;') {
-            alert('你还没有进行人机验证!');
-        }else{
-            if (cht.innerHTML == '&nbsp;&nbsp;验证成功&nbsp;&nbsp;'){
-                alert('你已通过人机验证');
-            }
-        }
-    }
-    //hCaptcha
-    var onSubmit = function(token) {
-        document.getElementById('content').style.display = '';
-        document.getElementById('text-3').innerHTML = '&nbsp;&nbsp;验证成功&nbsp;&nbsp;';
-        document.getElementById('text-3').style.color = 'rgb(0, 255, 0)';
-    };
-
-    var onError = function() {
-        console.error('Error occurred during captcha validation.');
-    };
-
-    window.onload = function() {
-        hcaptcha.render('hcaptcha', {
-            'sitekey': '5438f6cd-7c9c-43c7-a41b-de59ce3852be',
-            'callback': onSubmit,
-            'error-callback': onError
-        });
-    };
 </script>
 <style>
     body{
         background-color: rgb(255, 0, 212);
     }
     #body{
-        background-image: url('/img/-/KKLG.png');
+        background-color: rgba(255, 255, 255, 0.8);
         background-size: 20%;
         border-radius: 10px;
         margin-left: 80px;
@@ -130,9 +103,16 @@
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 10px;
     }
-    #imnar{
-        border-radius: 10px;
+    .yellow-img{
+        object-fit: cover;
         width: 300px;
+    }
+    #yplink{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .about{
+        vertical-align: top;
     }
 </style>
 <!---->
