@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/css/index.css">
     <link rel="stylesheet" type="text/css" href="/css/border-radius.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <script src="https://cnzw-api.github.io/js/url.js"></script>
     <audio src="/audio/TSHE.mp3" id="CNZW-114514"></audio>
     <div id="CNZW-live2d">
         <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
@@ -47,6 +48,18 @@
     <br>
 </div>
 <br>
+<script defer>
+    var pay_img = getURL('w');
+    if (pay_img == 'wechat') {
+        window.location.href = '/img/pay/pay.jpg';
+    }
+    if (pay_img == 'donate') {
+        window.location.href = '/img/pay/donate.jpg';
+    }
+    if (pay_img == 'qq') {
+        window.location.href = '/img/pay/pay-QQ.jpg';
+    }
+</script>
 <script>
     var CNZW_114514 = document.getElementById('CNZW-114514');
     function img(CNZW){
