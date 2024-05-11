@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="/css/border-radius.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <script src="https://cnzw-api.github.io/js/url.js"></script>
-    <audio src="/audio/TSHE.mp3" id="CNZW-114514"></audio>
     <div id="CNZW-live2d">
         <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
     </div>
@@ -32,7 +31,7 @@
         <h2 id="title">
             <span id="title-0">免责声明:</span>
             <br>
-            <span id="title-1">您对我们的所有支付均为对 CNZW 的捐赠，概不退还</span>
+            <span id="title-1">您对我们的所有支付均为对 <span class="CNZW">CNZW</span> 的捐赠，概不退还</span>
         </h2>
         <img id="pay" class="img-pay" src="/img/pay/pay.jpg" onclick="img('pay.jpg')" title="Pay" alt="Pay">
         <img id="donate" class="img-pay" src="/img/pay/donate.jpg" onclick="img('donate.jpg')" title="Donate" alt="Donate">
@@ -40,7 +39,7 @@
         <b id="thank">
             &nbsp;&nbsp;&nbsp;感谢你对&nbsp;
             <a id="CNZW-link" href="https://cnzw-wtw.github.io/" target="_blank" title="CNZW" onclick="CNZW()">
-                CNZW
+                <span class="CNZW">CNZW</span>
             </a>
             &nbsp;的所有赞助&nbsp;&nbsp;&nbsp;
         </b>
@@ -62,7 +61,7 @@
     }
 </script>
 <script>
-    var CNZW_114514 = document.getElementById('CNZW-114514');
+    var CNZW_114514 = new Audio('/audio/TSHE.mp3');
     function img(CNZW){
         window.open('/img/pay/' + CNZW, '_blank');
         CNZW_114514.play();
@@ -72,6 +71,10 @@
     }
 </script>
 <style>
+    @font-face{
+        font-family: 'CNZW';
+        src: url('/ttf/MC.ttf');
+    }
     .img-pay{
         border-radius: 5px;
         border-style: solid;
@@ -99,6 +102,9 @@
     #CNZW-link{
         text-decoration: none;
         color: rgb(0, 255, 0);
+    }
+    .CNZW{
+        font-family: 'CNZW';
     }
 </style>
 <!---->
