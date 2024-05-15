@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
-    <title>文件快递柜 - CNZW</title>
+    <title id="ht">文件快递柜 - CNZW</title>
     <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png">
     <link rel="stylesheet" href="/css/border-radius.css">
     <link rel="stylesheet" href="/css/footer.css">
@@ -18,45 +18,23 @@
 <!---->
 <div id="body" name="body">
     <center>
-        <h1 id="title">
-            <span class="CNZW">
-                CNZW
-            </span>
-            文件快递柜
-        </h1>
-        <b id="ts">
-            请使用网站所有者提供的文件码获取文件
-        </b>
-        <div id="code">
+            <h1 id="title">
+                <span id="th">文件名: </span>
+                <span id="file-name">666.txt</span>
+            </h1>
+            <a id="look" class="button" onclick="look()">&nbsp;&nbsp;预览&nbsp;&nbsp;</a>
+            <a id="dl" class="button" href="" download>&nbsp;&nbsp;Download&nbsp;&nbsp;</a>
             <br>
             <br>
-            <input id="icd" type="text" placeholder="请输入文件码" maxlength="10">
-            <br>
-            <br>
-            <a id="enter" onclick="enter()">
-                &nbsp;&nbsp;&nbsp;获取文件&nbsp;&nbsp;&nbsp;
-            </a>
-            <img src="/img/CNZW/loading.gif" id="loading" style="display: none;">
-        </div>
+            <iframe src="" id="yl" style="display: none;" title=""></iframe>
     </center>
     <br>
 </div>
 <br>
 <script>
-    var code = document.getElementById('icd');
-    var loading = document.getElementById('loading');
-    var et = document.getElementById('enter');
-    var c = getURL('code');
-    var file_link = './CWF/';
-    code.value = c;
-    function enter(){
-        code = code.value;
-        var numl = code;
-        et.style = 'display: none;';
-        loading.style = '';
-        setTimeout(function() {
-            window.location.href = file_link + code;
-        }, 1500)
+    function look(){
+        alert('仅支持浏览部分后缀名的视频, 文档, 图片等文件');
+        yl.style = '';
     }
 </script>
 <style>
@@ -80,36 +58,43 @@
     #title{
         background-image: url('/img/CNZW/color.png');
         background-size: 100%;
+        color: white;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
-    #ts{
-        font-size: 150%;
-    }
-    #enter{
+    .button{
         background-color: black;
-        border-radius: 15px;
-        border-style: solid;
-        border-color: rgb(0, 255, 0);
-        border-width: 5px;
         color: rgb(0, 255, 0);
+        text-decoration: none;
+        border-radius: 30px;
         font-size: 35px;
-    }
-    #icd{
-        width: 500px;
-        height: 50px;
-        background-color: black;
-        color: rgb(0, 255, 0);
         font-family: 'MC';
-        font-size: 50px;
-        text-align: center;
-        letter-spacing: 10px;
+        border-width: 3px;
+        border-color: rgb(0, 255, 0);
+        border-style: solid;
     }
-    #loading{
-        width: 10%;
-        border-radius: 50%;
+    #look{
+        margin-right: 50px;
+    }
+    #yl{
+        background-color: rgba(0, 0, 0, 0);
+        width: 95%;
+        height: 500px;
     }
 </style>
+<!---->
+<script defer>
+    var ht = document.getElementById('ht');
+    var file_name = document.getElementById('file-name');
+    ht.innerText = '文件快递柜[' + file_name.innerText + '] - CNZW';
+    var dl = document.getElementById('dl');
+    dl.href = file_name.innerText;
+    //look
+    var yl = document.getElementById('yl');
+    yl.src = file_name.innerText;
+    yl.alt = file_name.innerText;
+    yl.title = file_name.innerText;
+</script>
 <!---->
 <script>
     //link
