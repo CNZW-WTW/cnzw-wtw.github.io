@@ -36,7 +36,7 @@
             <a id="enter" onclick="enter()">
                 &nbsp;&nbsp;&nbsp;获取文件&nbsp;&nbsp;&nbsp;
             </a>
-            <img src="/img/CNZW/loading.gif" id="loading" style="display: none;">
+            <img src="/img/CNZW/loading-github.gif" id="loading" style="display: none;">
         </div>
     </center>
     <br>
@@ -47,8 +47,12 @@
     var loading = document.getElementById('loading');
     var et = document.getElementById('enter');
     var c = getURL('code');
+    var e = getURL('e');
     var file_link = './CWF/';
     code.value = c;
+    if (e == 'true') {
+        enter();
+    }
     function enter(){
         code = code.value;
         var numl = code;
