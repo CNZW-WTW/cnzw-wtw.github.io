@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title id="ht">文件快递柜 - CNZW</title>
+    <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png">
+    <link rel="stylesheet" href="/css/border-radius.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="https://cnzw-api.github.io/js/url.js"></script>
+    <div id="CNZW-live2d">
+        <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
+    </div>
+</head>
+<body>
+<noscript>
+    <center><p style="background-color: white;color: red;"><strong>你的浏览器不支持或已禁用JavaScript</strong></p></center>
+</noscript>
+<!---->
+<div id="body" name="body">
+    <center>
+            <h1 id="title">
+                <span id="th">文件名: </span>
+                <span>[</span>
+                <span id="file-name">JMcomic2</span>
+                <span>]</span>
+            </h1>
+            <a id="look" class="button" onclick="look()">&nbsp;&nbsp;预览&nbsp;&nbsp;</a>
+            <a id="dl" class="button" onclick="download_file()">&nbsp;&nbsp;Download&nbsp;&nbsp;</a>
+            <br>
+            <br>
+            <img src="/img/CNZW/loading-github.gif" style="display: none;" id="loading-ico">
+            <br>
+            <br>
+            <iframe src="" id="yl" style="display: none;" title="预览" onload></iframe>
+    </center>
+    <br>
+</div>
+<br>
+<script>
+    var loading_ico = document.getElementById('loading-ico');
+    function look(){
+        alert('仅支持浏览部分后缀名的视频, 文档, 图片等文件');
+        yl.style = '';
+    }
+    function download_file(){
+        loading_ico.style = '';
+        setTimeout(function() {
+            window.location.href = 'https://jm365.work/ZNPJam/';
+        }, 3000)
+    }
+</script>
+<style>
+    @font-face{
+        font-family: 'MC';
+        src: url('/ttf/MC.ttf');
+    }
+    .CNZW{
+        font-family: 'MC';
+    }
+    body {
+        background-image: url('/img/CNZW/file.png');
+        background-color: black;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center center;
+        margin: 0;
+        padding: 0;
+        background-attachment: fixed;
+    }
+    #title{
+        background-image: url('/img/CNZW/color.png');
+        background-size: 100%;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .button{
+        background-color: black;
+        color: rgb(0, 255, 0);
+        text-decoration: none;
+        border-radius: 30px;
+        font-size: 35px;
+        font-family: 'MC';
+        border-width: 3px;
+        border-color: rgb(0, 255, 0);
+        border-style: solid;
+    }
+    #look{
+        margin-right: 50px;
+    }
+    #yl{
+        background-color: rgba(0, 0, 0, 0);
+        width: 95%;
+        height: 500px;
+    }
+</style>
+<!---->
+<script defer>
+    var ht = document.getElementById('ht');
+    var file_name = document.getElementById('file-name');
+    ht.innerText = '文件快递柜[' + file_name.innerText + '] - CNZW';
+    var dl = document.getElementById('dl');
+    //look
+    var yl = document.getElementById('yl');
+    yl.src = file_name.innerText;
+    yl.alt = file_name.innerText;
+    yl.title = file_name.innerText;
+</script>
+<!---->
+<script>
+    //link
+    var gh = 'https://github.com/CNZW-WTW/';
+    var bl = 'https://space.bilibili.com/3493132140284888/';
+    var x = 'https://twitter.com/CNZW_WTW';
+    var qq = 'tencent://message/?uin=1780614361';
+    var em = 'mailto:cnzw-wtw@qq.com';
+    function cg() {
+        window.open(gh, '_blank');
+    }
+    function cb() {
+        window.open(bl, '_blank');
+    }
+    function cx() {
+        window.open(x, '_blank');
+    }
+    function cq() {
+        alert('QQ: 1780614361');
+        window.open(qq, '_blank');
+    }
+    function cem() {
+        alert('联系我请使用邮箱: cnzw-wtw@qq.com');
+        window.open(em, '_blank');
+    }
+</script>
+<footer id="footer">
+    <center>
+        <div id="ftlk">
+            <br>
+            <img src="/img/icon/github.png" id="cwflk-gh" class="cfl" onclick="cg()" title="Github:@CNZW-WTW" alt="Github:@CNZW-WTW" width="55">
+            <img src="/img/icon/bilibili.png" id="cwflk-bl" class="cfl" onclick="cb()" title="Bilibili:@CNZW" alt="Bilibili:@CNZW" width="55">
+            <img src="/img/icon/twitter.png" id="cwflk-x" class="cfl" onclick="cx()" title="X:@CNZW_WTW" alt="X:@CNZW_WTW" width="55">
+            <img src="/img/icon/qq.png" id="cwflk-qq" class="cfl" onclick="cq()" title="QQ" alt="QQ" width="55">
+            <img src="/img/icon/email.png" id="cwflk-yt" class="" onclick="cem()" title="E-mail:cnzw-wtw@qq.com" alt="E-mail:cnzw-wtw@qq.com" width="55">
+        </div>
+        <p id="copyright">
+            <strong>
+                Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;CNZW. All Right Reserved
+            </strong>
+        </p>
+    </center>
+    <script>
+        var currentYear = new Date().getFullYear();
+        document.getElementById("Y").innerHTML = currentYear;
+    </script>
+</footer>
+</body>
+</html>
