@@ -14,3 +14,7 @@
 #license{
     border-style: double;
 }
+::selection{
+    background: rgb(0, 255, 0);
+    color: black;
+}

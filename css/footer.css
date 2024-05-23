@@ -21,3 +21,7 @@ img.cfl{
     color: white;
     margin-bottom: 15px;
 }
+::selection{
+    background: rgb(0, 255, 0);
+    color: black;
+}

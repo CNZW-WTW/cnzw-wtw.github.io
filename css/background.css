@@ -1,0 +1,14 @@
+body {
+    background-image: url('/img/CNZW/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-attachment: fixed;
+}
+::selection{
+    background: rgb(0, 255, 0);
+    color: black;
+}

@@ -4,3 +4,7 @@
     margin-right: 100px;
     border-radius: 10px;
 }
+::selection{
+    background: rgb(0, 255, 0);
+    color: black;
+}
