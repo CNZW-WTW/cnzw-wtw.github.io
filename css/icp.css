@@ -9,6 +9,8 @@
 }
 #icp-moe-code:hover{
     color: rgb(0, 255, 0);
+    background-color: black;
+    border-radius: 3px;
 }
 #icp-moe-icon{
     width: 25px;
