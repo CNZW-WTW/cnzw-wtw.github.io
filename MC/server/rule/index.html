@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <title>CNZW服务器规则[Minecraft_Server_Rule] - CNZW</title>
     <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png">
-    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/index-nb.css">
     <link rel="stylesheet" type="text/css" href="/css/border-radius.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/icp.css">
+    <link rel="stylesheet" type="text/css" href="/css/all.css">
     <div id="CNZW-live2d">
         <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
     </div>
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://cnzw-api.github.io/js/url.js"></script>
 </head>
-<body>
+<body id="rb">
 <div class="top" name="top">
     <h1 class="top">
         <a href="/"><img src="/img/CNZW/CNZW.png" width="250px" title="CNZW" /></a>
@@ -33,13 +36,13 @@
     <div id="pot" style="display: none;">
         <center>
             <p id="ft">请仔细阅读CNZW服务器规则并牢记，否则可能会导致你在服务器内受到<span class="op">管理员</span>或<span class="op">服主</span>对你的<span class="mute">禁言</span>或<span class="ban">封号</span>等处理！！！</p>
-            <b>服务器IP(Server IP)：bt1.furme.top</b>
+            <b>服务器IP(Server IP)：</b>
             <br>
-            <b>端口号(Port)：33333，44444，55555</b>
+            <b>端口号(Port)：</b>
             <br>
-            <b>最大人数(Max Player)：15</b>
+            <b>最大人数(Max Player)：</b>
         </center>
-        <p class="p1">
+        <p class="p1" id="p3">
             <h2>一、玩家规则及保护措施</h2>
             <b class="pt">1. 玩家在本服务器内有自由发言权，但由于辱骂他人而导致的损失将自行承担，本服务器概不负责</b>
             <br>
@@ -58,7 +61,7 @@
             <br>
             <b class="pt">6. 禁止随意辱骂<span class="op">管理员</span>或<span class="op">服主</span> - [违反本规定将&nbsp;<span class="mute">禁言</span>&nbsp;<i>1月</i>&nbsp;]</b>
         </p>
-        <p class="p2">
+        <p class="p2" id="p4">
             <h2>二、管理员规则及保护措施</h2>
             <b class="pt">1. 禁止滥用权限，随意对没有违反规定的玩家进行处罚 - [违反本规定将&nbsp;<span class="ban">撤销管理员权限</span>&nbsp;+&nbsp;<span class="ban">封号</span>&nbsp;<i>永久</i>&nbsp;]</b>
             <br>
@@ -92,6 +95,7 @@
         <br>
     </center>
 </div>
+<!--body style-->
 <style>
     #title{
         background-image: url('/img/CNZW/color.png');
@@ -118,7 +122,7 @@
         border-style: solid;
     }
     #cwhc{
-        background-color: rgba(255, 255, 255, 0.808);
+        background-color: black;
         margin-left: 100px;
         margin-right: 100px;
         border-bottom-left-radius: 10px;
@@ -130,6 +134,7 @@
     #pwl{
         color: #007bff;
         text-decoration: none;
+        font-family: 'MC';
     }
     #text{
         font-size: 30px;
@@ -166,6 +171,7 @@
     var onSubmit = function(token) {
         document.getElementById('pot').style.display = '';
         document.getElementById('cwhc').style.display = 'none';
+        document.getElementById('rb').style = "background-image: url('/img/CNZW/background.jpg');";
     };
 
     var onError = function() {
