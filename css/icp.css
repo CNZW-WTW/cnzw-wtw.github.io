@@ -2,11 +2,13 @@
 .icp{
     vertical-align: middle;
 }
+
 /* icp.gov.moe */
 #icp-moe-icon{
     width: 25px;
     vertical-align: middle;
-}#icp-moe-link{
+}
+#icp-moe-link{
     text-decoration: none;
     color: rgb(255, 0, 150);
 }
