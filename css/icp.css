@@ -3,7 +3,10 @@
     vertical-align: middle;
 }
 /* icp.gov.moe */
-#icp-moe{
+#icp-moe-icon{
+    width: 25px;
+    vertical-align: middle;
+}#icp-moe-link{
     text-decoration: none;
     color: rgb(255, 0, 150);
 }
@@ -11,8 +14,4 @@
     color: rgb(0, 255, 0);
     background-color: black;
     border-radius: 3px;
-}
-#icp-moe-icon{
-    width: 25px;
-    vertical-align: middle;
 }
