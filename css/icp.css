@@ -1,8 +1,14 @@
+/* ICP STYLE */
+.icp{
+    vertical-align: middle;
+}
 /* icp.gov.moe */
 #icp-moe{
     text-decoration: none;
     color: rgb(255, 0, 150);
-    text-align: center;
+}
+#icp-moe-code:hover{
+    color: rgb(0, 255, 0);
 }
 #icp-moe-icon{
     width: 25px;
