@@ -33,8 +33,8 @@
                   <li _msttexthash="22722154" _msthash="84">指定的 URL 不正确</li>
                   <li _msttexthash="64735957" _msthash="85">您正在尝试访问受限制的文件。</li>
                </ul>
-                     </div>
-                  </article>
+                </div>
+            </article>
       </main>
     <center>
         <h4 id="error-url">
@@ -68,16 +68,16 @@
                 document.getElementById("Y").innerHTML = currentYear;
             </script>
         </center>
-    </footer>    
+    </footer>
 </body>
 <script>
     var url = document.getElementById('url');
     url.innerText = '错误的URL：' + window.location.href;
-    if (window.location.href.endsWith('404.html')) {
+    if (location.href.endsWith('404.html')) {
         url.innerText = '';
     }
-    if (window.location.href.startsWith('https://cnzw.xn--8mr619f.chat')) {
-        url.innerText = window.location.href.replace('xn--8mr619f', '原神');
+    if (location.hostname == 'cnzw.xn--8mr619f.chat') {
+        url.innerText = 'https://cnzw.原神.chat' + location.pathname;
     }
 </script>
 <style>
