@@ -44,7 +44,7 @@
         <h2 id="thank">
             <span id="thank-title">&nbsp;鸣谢名单&nbsp;</span>
         </h2>
-        <div id="CNZW-API">
+        <div id="CNZW-API" onclick="link('CNZW-API')">
             <img id="CNZW-API-img" class="thankheadimg" src="/img/CNZW/TB.png" alt="CNZW API" title="为 CNZW 提供API接口">
             <br>
             <b id="CNZW-API-name" class="thank-name">CNZW API</b>
@@ -52,6 +52,15 @@
         <br>
     </div>
 </center>
+<!--link-->
+<script>
+    function link(href){
+        if (href == 'CNZW-API') {
+            window.open('https://cnzw-api.github.io/', '_blank');
+        }
+    }
+</script>
+<!---->
 <script>
     var tsheaudio = new Audio('/audio/TSHE.mp3');
     function hdigc(){
