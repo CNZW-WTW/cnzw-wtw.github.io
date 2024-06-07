@@ -31,7 +31,7 @@
 <!---->
 <div id="body" name="body">
     <center>
-        <h1 id="title"><span class="mc">CNZW Studio Minecraft</span>服务器规则</h1>
+        <h1 id="title"><span id="t1"><span class="mc">CNZW Studio Minecraft</span>服务器规则<span></h1>
     </center>
     <div id="pot" style="display: none;">
         <center>
@@ -100,11 +100,15 @@
 <!--body style-->
 <style>
     #title{
-        background-image: url('/img/CNZW/color.png');
-        background-size: 100%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         margin-bottom: -1px;
+        background: linear-gradient(to right, rgb(0, 255, 0) 0%, rgb(0, 140, 255) 25%, rgb(115, 255, 0) 50%, yellow 75%, rgb(0, 255, 242) 100%);
+    }
+    #t1{
+        background: linear-gradient(to right, pink 0%, rgb(255, 0, 221) 50%, rgb(255, 0, 43) 100%);
+        background-clip: text;
+        color: transparent;
     }
     #msgimg{
         width: 50px;
