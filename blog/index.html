@@ -10,15 +10,14 @@
     </div>
     <script>
         const backgroundImages = [
-        'url(/img/background/bg.jpg)',
-        'url(/img/background/0.png)',
-        'url(/img/background/1.png)',
-        'url(/img/background/2.png)',
-        'url(/img/background/3.png)',
-        'url(/img/background/4.png)',
-        'url(/img/background/5.png)',
-        'url(/img/background/6.png)',
-        'url(/img/background/7.png)',
+        'url(https://raw.bgithub.xyz/CNZW-WTW/img/main/background/0.png)',
+        'url(https://raw.bgithub.xyz/CNZW-WTW/img/main/background/1.png)',
+        'url(https://raw.bgithub.xyz/CNZW-WTW/img/main/background/2.png)',
+        'url(https://raw.bgithub.xyz/CNZW-WTW/img/main/background/3.png)',
+        'url(https://raw.bgithub.xyz/CNZW-WTW/img/main/background/4.png)',
+        'url(https://raw.bgithub.xyz/CNZW-WTW/img/main/background/5.png)',
+        'url(https://raw.bgithub.xyz/CNZW-WTW/img/main/background/6.png)',
+        'url(https://raw.bgithub.xyz/CNZW-WTW/img/main/background/7.png)',
         ];
         function changeBackground() {
             const randomIndex = Math.floor(Math.random() * backgroundImages.length);
@@ -35,40 +34,71 @@
 <center>
     <div id="head">
         <center>
-            <img class="headimg" src="CNZW.jpg">
+            <img class="headimg" src="CNZW.jpg" onclick="hdigc()">
             <h1 id="titname">CNZW</h1>
         </center>
     </div>
 </center>
-<div id="body" name="body">
-</div>
+<center>
+    <div id="cwzl" class="body">
+        <h2 id="thank">
+            <span id="thank-title">&nbsp;鸣谢名单&nbsp;</span>
+        </h2>
+        <div id="CNZW-API">
+            <img id="CNZW-API-img" class="thankheadimg" src="/img/CNZW/TB.png" alt="CNZW API" title="为 CNZW 提供API接口">
+            <br>
+            <b id="CNZW-API-name" class="thank-name">CNZW API</b>
+        </div>
+        <br>
+    </div>
+</center>
+<script>
+    var tsheaudio = new Audio('/audio/TSHE.mp3');
+    function hdigc(){
+        tsheaudio.play();
+    }
+</script>
+<style>
+    #CNZW-API-img{
+        width: 10%;
+    }
+</style>
 <!---->
 <script>
     //link
     var gh = 'https://github.com/CNZW-WTW/';
     var bl = 'https://space.bilibili.com/3493132140284888/';
     var x = 'https://twitter.com/CNZW_WTW';
-    var em = 'mailto:cnzw-wtw@qq.com';    
-    function cg(){
+    var qq = 'tencent://message/?uin=1780614361';
+    var em = 'mailto:cnzw-wtw@qq.com';
+    function cg() {
         window.open(gh, '_blank');
     }
-    function cb(){
+    function cb() {
         window.open(bl, '_blank');
     }
-    function cx(){
+    function cx() {
         window.open(x, '_blank');
     }
-    function cem(){
-        alert('联系我请使用邮箱:cnzw-wtw@qq.com');
+    function cq() {
+        alert('QQ: 1780614361');
+        window.open(qq, '_blank');
+    }
+    function cem() {
+        alert('联系我请使用邮箱: cnzw-wtw@qq.com');
         window.open(em, '_blank');
     }
 </script>
 <footer id="footer">
     <center>
-        <img src="/img/icon/github.png" id="cwflk-gh" class="cfl" onclick="cg()" title="Github:@CNZW-WTW" alt="Github:@CNZW-WTW" width="55">
-        <img src="/img/icon/bilibili.png" id="cwflk-bl" class="cfl" onclick="cb()" title="Bilibili:@CNZW" alt="Bilibili:@CNZW" width="55">
-        <img src="/img/icon/twitter.png" id="cwflk-x" class="cfl" onclick="cx()" title="X:@CNZW_WTW" alt="X:@CNZW_WTW" width="55">
-        <img src="/img/icon/email.png" id="cwflk-yt" class="" onclick="cem()" title="E-mail:cnzw-wtw@qq.com" alt="E-mail:cnzw-wtw@qq.com" width="55">
+        <div id="ftlk">
+            <br>
+            <img src="/img/icon/github.png" id="cwflk-gh" class="cfl" onclick="cg()" title="Github:@CNZW-WTW" alt="Github:@CNZW-WTW" width="55">
+            <img src="/img/icon/bilibili.png" id="cwflk-bl" class="cfl" onclick="cb()" title="Bilibili:@CNZW" alt="Bilibili:@CNZW" width="55">
+            <img src="/img/icon/twitter.png" id="cwflk-x" class="cfl" onclick="cx()" title="X:@CNZW_WTW" alt="X:@CNZW_WTW" width="55">
+            <img src="/img/icon/qq.png" id="cwflk-qq" class="cfl" onclick="cq()" title="QQ" alt="QQ" width="55">
+            <img src="/img/icon/email.png" id="cwflk-yt" class="" onclick="cem()" title="E-mail:cnzw-wtw@qq.com" alt="E-mail:cnzw-wtw@qq.com" width="55">
+        </div>
         <p id="copyright">
             <strong>
                 Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;CNZW. All Right Reserved
