@@ -79,6 +79,9 @@
     }
     if (location.hostname == 'cnzw.xn--8mr619f.chat') {
         url.innerText = '错误的URL: [ https://cnzw.原神.chat' + location.pathname + ' ]';
+        if (location.href.endsWith('404.html')) {
+            url.innerText = '';
+        }
     }
 </script>
 <style>
