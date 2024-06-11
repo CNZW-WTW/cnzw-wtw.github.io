@@ -2,10 +2,10 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
-    <title>Pay - CNZW</title>
+    <title>Pay / Donate - CNZW</title>
     <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png" style="border-radius: 10px;">
     <link rel="stylesheet" type="text/css" href="/css/index.css">
-    <link rel="stylesheet" type="text/css" href="/css/border-radius.css">
+    <link rel="stylesheet" type="text/css" href="/css/b-r.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <script src="https://cnzw-api.github.io/js/url.js"></script>
     <div id="CNZW-live2d">
@@ -20,6 +20,10 @@
         <a  href="/" title="index" id="index" class="top">首页</a>
         <b class="top">|</b>
         <a  href="mailto:cnzw-wtw@qq.com?subject=反馈" id="mailto" class="top">反馈</a>
+        <b class="top">|</b>
+        <a href="javascript:void(0);" onclick="about()">
+            <img src="/img/CNZW/donate.png" id="tda">
+        </a>
     </h1>
 </div>
 <noscript>
@@ -69,6 +73,10 @@
     function CNZW(){
         CNZW_114514.play();
     }
+    function about(){
+        alert('这是 CNZW 的赞助页面');
+        alert('感谢你对 CNZW 的所有赞助');
+    }
 </script>
 <style>
     @font-face{
@@ -105,6 +113,10 @@
     }
     .CNZW{
         font-family: 'CNZW';
+    }
+    #tda{
+        width: 100px;
+        margin-bottom: -8px;
     }
 </style>
 <!---->
