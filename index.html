@@ -1,5 +1,5 @@
 <!--
-{==C==N==Z==W== [ 下北泽著名哲学家田所浩二吼叫时的ASCII图像 ] ==C==N==Z==W==}
+{==C==N==Z==W== [ 下北泽著名哲学家田所浩二吼叫时形象的ASCII图像 ] ==C==N==Z==W==}
        　  　▃▆█▇▄▖
 　 　 　 ▟◤▖　　　◥█▎
    　 ◢◤　 ▐　　　 　▐▉
@@ -27,13 +27,20 @@ X: https://twitter.com/CNZW_WTW/
     <meta charset="UTF-8">
     <title>CNZW</title>
     <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png">
-    <link rel="stylesheet" type="text/css" href="/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/css/index.css">
-    <link rel="stylesheet" type="text/css" href="/css/b-r.css">
     <link rel="stylesheet" type="text/css" href="/css/icp.css">
+    <link rel="stylesheet" type="text/css" href="/css/index-nb.css">
+    <link rel="stylesheet" type="text/css" href="/css/all.css">
+    <audio src="https://raw.bgithub.xyz/CNZW-WTW/audio/main/BC.mp3" onload autoplay loop></audio>
     <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
 </head>
 <body>
+<div id="donate-page" class="donate-pay" style="display: none;">
+    <div class="donate-close-button" title="close" onclick="donate('close')">×</div>
+    <center>
+        <h2 class="donate-title">赞助 / DONATE</h2>
+        <div class="pay-img"></div>
+    </center>
+</div>
 <div class="top" name="top">
     <h1 class="top">
         <a href="/"><img src="/img/CNZW/CNZW.png" width="250px" title="CNZW" /></a>
@@ -41,6 +48,10 @@ X: https://twitter.com/CNZW_WTW/
         <a  href="/" title="index" id="index" class="top">首页</a>
         <b class="top">|</b>
         <a  href="mailto:cnzw-wtw@qq.com?subject=反馈" id="mailto" class="top">反馈</a>
+        <b class="top">|</b>
+        <a href="http://wapmz.com/in/93" target="_blank">
+            <img src="http://wapmz.com/cn/big/93" alt="wapmz.com" title="网站数据统计">
+        </a>
     </h1>
 </div>
 <noscript>
@@ -48,9 +59,126 @@ X: https://twitter.com/CNZW_WTW/
 </noscript>
 <!---->
 <div id="body" name="body">
+    <center>
+        <b id="pw">Powered by <a href="https://github.com/CNZW-WTW" target="_blank" id="pwl">CNZW</a></b>
+        <br>
+        <b id="cdgu">
+            站点所有代码由&nbsp;
+            <a id="ghl" href="https://github.com/CNZW-WTW/" target="_blank">
+                <img src="/img/icon/github.png" id="ghin">
+                CNZW-WTW
+            </a>
+            &nbsp;维护
+        </b>
+        <br>
+        <br>
+        <br>
+        <div class="donate">
+            <a href="javascript:void(0)" class="donate" onclick="donate('open')" title="Donate Me">
+                <div class="donate"></div>
+            </a>
+            <b id="dt">
+                DONATE ME
+            </b>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="m-l.rar" download>dl my lv cm img</a>
+    </center>
 </div>
 <script>
+    var donate_page = document.getElementById('donate-page');
+    function donate(type){
+        if (type == 'open') {
+            donate_page.style = '';
+        }
+        if (type == 'close') {
+            donate_page.style = 'display: none;';
+        }
+    }
 </script>
+<style>
+    .donate-close-button{
+        user-select: none;
+        position: fixed;
+        top: -30px;
+        right: 15px;
+        color: white;
+        font-size: 100px;
+        border-radius: 50%;
+    }
+    .donate-title{
+        color: white;
+        font-size: 50px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+    }
+    .donate-pay{
+        position: fixed;
+        z-index: 99999;
+        width: 100%;
+        height: 130%;
+        margin-top: -25px;
+        background-color: rgba(70, 70, 70, 0.8);
+    }
+    .pay-img{
+        width: 400px;
+        height: 540px;
+        background-image: url('/img/pay/pay.jpg');
+        background-size: 100%;
+        border-radius: 10px;
+    }
+    #pw{
+        font-size: 50px;
+        background: linear-gradient(
+            to right,
+            rgb(33, 136, 255) 0%,
+            rgb(128, 78, 218) 100%
+        );
+        background-clip: text;
+        color: transparent;
+    }
+    #pwl{
+        font-size: 50px;
+        text-decoration: none;
+        font-family: 'MC';
+        color: transparent;
+    }
+    #pwl:hover{
+        border: 
+        5px
+        rgb(0, 123, 255)
+        solid;
+        border-radius: 10px;
+    }
+    #cdgu{
+        font-size: 20px;
+    }
+    #ghl{
+        text-decoration: none;
+        color: black;
+    }
+    #ghl:visited{
+        color: rgb(160, 161, 167);
+    }
+    #ghl:active{
+        color: rgb(0, 123, 255);
+    }
+    #ghin{
+        background-color: black;
+        width: 20px;
+        border-radius: 50%;
+        margin-bottom: -2px;
+    }
+    .donate{
+        width: 100px;
+        height: 100px;
+        background-image: url('/img/CNZW/donate.png');
+        background-size: 100%;
+    }
+</style>
 <!---->
 <footer id="footer">
     <center>
