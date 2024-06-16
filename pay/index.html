@@ -22,7 +22,7 @@
         <a  href="mailto:cnzw-wtw@qq.com?subject=反馈" id="mailto" class="top">反馈</a>
         <b class="top">|</b>
         <a href="javascript:void(0);" onclick="about()">
-            <img src="/img/CNZW/donate.png" id="tda">
+            <div class="tda"></div>
         </a>
     </h1>
 </div>
@@ -40,13 +40,6 @@
         <img id="pay" class="img-pay" src="/img/pay/pay.jpg" onclick="img('pay.jpg')" title="Pay" alt="Pay">
         <img id="donate" class="img-pay" src="/img/pay/donate.jpg" onclick="img('donate.jpg')" title="Donate" alt="Donate">
         <img id="pay-QQ" class="img-pay" src="/img/pay/pay-QQ.jpg" onclick="img('pay-QQ.jpg')" title="Pay with QQ" alt="Pay with QQ">
-        <b id="thank">
-            &nbsp;&nbsp;&nbsp;感谢你对&nbsp;
-            <a id="CNZW-link" href="https://cnzw-wtw.github.io/" target="_blank" title="CNZW" onclick="CNZW()">
-                <span class="CNZW">CNZW</span>
-            </a>
-            &nbsp;的所有赞助&nbsp;&nbsp;&nbsp;
-        </b>
     </center>
     <br>
 </div>
@@ -65,14 +58,6 @@
     }
 </script>
 <script>
-    var CNZW_114514 = new Audio('/audio/TSHE.mp3');
-    function img(CNZW){
-        window.open('/img/pay/' + CNZW, '_blank');
-        CNZW_114514.play();
-    }
-    function CNZW(){
-        CNZW_114514.play();
-    }
     function about(){
         alert('这是 CNZW 的赞助页面');
         alert('感谢你对 CNZW 的所有赞助');
@@ -95,28 +80,13 @@
         min-width: 150px;
         min-height: 200px;
     }
-    #thank{
+    .tda{
         display: inline-block;
-        vertical-align: top;
-        color: white;
-        background-color: black;
-        border-radius: 5px;
-        border-color: rgb(0, 255, 0);
-        border-width: 1px;
-        border-style: solid;
-        font-size: 30px;
-        margin-top: 10px;
-    }
-    #CNZW-link{
-        text-decoration: none;
-        color: rgb(0, 255, 0);
-    }
-    .CNZW{
-        font-family: 'CNZW';
-    }
-    #tda{
         width: 100px;
+        height: 100px;
         margin-bottom: -8px;
+        background-image: url('/img/CNZW/donate.png');
+        background-size: 100%;
     }
 </style>
 <!---->
