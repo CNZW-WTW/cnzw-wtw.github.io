@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title id="title">CNZW</title>
+    <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png">
+    <link rel="stylesheet" href="/css/all.css">
+    <script src="https://cnzw-api.github.io/js/url.js"></script>
+</head>
+<body id="crot">
+<noscript>
+    <center><p style="background-color: white;color: red;"><strong>你的浏览器不支持或已禁用JavaScript</strong></p></center>
+</noscript>
+<!---->
+<center>
+    <input id="crdi" class="color-code" type="text" placeholder="请输入完整颜色代码" maxlength="22">
+</center>
+<script>
+    var code = document.getElementById('crdi'),
+        crot = document.getElementById('crot');
+    var cd = '#' + getURL('color');
+    code.value = cd;
+    crot.style = 'background-color: ' + cd + ';';
+    code.style = 'background-color: ' + cd + ';';
+    setInterval(function(){
+        crot.style = 'background-color: ' + code.value + ';';
+        code.style = 'background-color: ' + code.value + ';';
+    })
+</script>
+<style>
+    .color-code{
+        position: fixed;
+        text-align: center;
+        bottom: 10px;
+        border: none;
+        outline: none;
+        text-shadow:1px 1px white;
+    }
+</style>
+<!---->
+</body>
+</html>
