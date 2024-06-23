@@ -19,9 +19,11 @@
     var code = document.getElementById('crdi'),
         crot = document.getElementById('crot');
     var cd = '#' + getURL('color');
-    code.value = cd;
-    crot.style = 'background-color: ' + cd + ';';
-    code.style = 'background-color: ' + cd + ';';
+    if (cd == '#') {
+        code.value = '';
+    }else{
+        code.value = cd;
+    }
     setInterval(function(){
         crot.style = 'background-color: ' + code.value + ';';
         code.style = 'background-color: ' + code.value + ';';
