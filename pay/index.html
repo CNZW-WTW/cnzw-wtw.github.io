@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Pay / Donate - CNZW</title>
-    <link rel="icon" sizes="any" mask href="/img/CNZW/TB.png" style="border-radius: 10px;">
+    <link rel="icon" href="/img/CNZW/TB.png">
     <link rel="stylesheet" type="text/css" href="/css/index.css">
     <link rel="stylesheet" type="text/css" href="/css/b-r.css">
-    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/icp.css">
     <script src="https://cnzw-api.github.io/js/url.js"></script>
     <div id="CNZW-live2d">
         <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
@@ -37,9 +37,9 @@
             <br>
             <span id="title-1">您对我们的所有支付均为对 <span class="CNZW">CNZW</span> 的捐赠，概不退还</span>
         </h2>
-        <img id="pay" class="img-pay" src="/img/pay/pay.jpg" onclick="img('pay.jpg')" title="Pay" alt="Pay">
-        <img id="donate" class="img-pay" src="/img/pay/donate.jpg" onclick="img('donate.jpg')" title="Donate" alt="Donate">
-        <img id="pay-QQ" class="img-pay" src="/img/pay/pay-QQ.jpg" onclick="img('pay-QQ.jpg')" title="Pay with QQ" alt="Pay with QQ">
+        <img id="pay" class="img-pay" src="/img/pay/pay.jpg" title="Pay" alt="Pay">
+        <img id="donate" class="img-pay" src="/img/pay/donate.jpg" title="Donate" alt="Donate">
+        <img id="pay-QQ" class="img-pay" src="/img/pay/pay-QQ.jpg" title="Pay with QQ" alt="Pay with QQ">
     </center>
     <br>
 </div>
@@ -90,51 +90,39 @@
     }
 </style>
 <!---->
-<script>
-    //link
-    var gh = 'https://github.com/CNZW-WTW/';
-    var bl = 'https://space.bilibili.com/3493132140284888/';
-    var x = 'https://twitter.com/CNZW_WTW';
-    var qq = 'tencent://message/?uin=1780614361';
-    var em = 'mailto:cnzw-wtw@qq.com';
-    function cg() {
-        window.open(gh, '_blank');
-    }
-    function cb() {
-        window.open(bl, '_blank');
-    }
-    function cx() {
-        window.open(x, '_blank');
-    }
-    function cq() {
-        alert('QQ: 1780614361');
-        window.open(qq, '_blank');
-    }
-    function cem() {
-        alert('联系我请使用邮箱: cnzw-wtw@qq.com');
-        window.open(em, '_blank');
-    }
-</script>
 <footer id="footer">
     <center>
-        <div id="ftlk">
-            <br>
-            <img src="/img/icon/github.png" id="cwflk-gh" class="cfl" onclick="cg()" title="Github:@CNZW-WTW" alt="Github:@CNZW-WTW" width="55">
-            <img src="/img/icon/bilibili.png" id="cwflk-bl" class="cfl" onclick="cb()" title="Bilibili:@CNZW" alt="Bilibili:@CNZW" width="55">
-            <img src="/img/icon/twitter.png" id="cwflk-x" class="cfl" onclick="cx()" title="X:@CNZW_WTW" alt="X:@CNZW_WTW" width="55">
-            <img src="/img/icon/qq.png" id="cwflk-qq" class="cfl" onclick="cq()" title="QQ" alt="QQ" width="55">
-            <img src="/img/icon/email.png" id="cwflk-yt" class="" onclick="cem()" title="E-mail:cnzw-wtw@qq.com" alt="E-mail:cnzw-wtw@qq.com" width="55">
+        <hr color="black" size="3" />
+        <a href="https://github.com/CNZW-WTW/" target="_blank" title="GitHub:@CNZW-WTW" >
+            <img src="https://img.shields.io/badge/GitHub-CNZW--WTW-black" alt="GitHub:@CNZW-WTW">
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://space.bilibili.com/3493132140284888/" target="_blank" title="Bilibili:@CNZW" >
+            <img src="https://img.shields.io/badge/Bilibili-CNZW-blue" alt="Bilibili:@CNZW">
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com/CNZW_WTW" target="_blank" title="X:@CNZW_WTW" >
+            <img src="https://img.shields.io/badge/X-CNZW__WTW-black" alt="X:@CNZW_WTW">
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://youtube.com/@CNZW-WTW" target="_blank" title="YouTube:@CNZW-WTW" >
+            <img src="https://img.shields.io/badge/YouTube-CNZW--WTW-red" alt="YouTube:@CNZW-WTW">
+        </a>
+        <br>
+        <b id="copyright"><strong>Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;CNZW. All Right Reserved</strong></b>
+        <br>
+        <div id="icp-moe">
+            <img src="https://moe.one/view/img/ico64.png" id="icp-moe-icon">
+            <a href="https://icp.gov.moe/?keyword=20245204" target="_blank" id="icp-moe-link" class="icp">
+                <span id="icp-moe-code">萌ICP备20245204号</span>
+            </a>
         </div>
-        <p id="copyright">
-            <strong>
-                Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;CNZW. All Right Reserved
-            </strong>
-        </p>
+        <hr color="black" size="3" />
+        <script>
+            var currentYear = new Date().getFullYear();
+            document.getElementById("Y").innerHTML = currentYear;
+        </script>
     </center>
-    <script>
-        var currentYear = new Date().getFullYear();
-        document.getElementById("Y").innerHTML = currentYear;
-    </script>
 </footer>
 </body>
 </html>
