@@ -34,12 +34,11 @@
 <!---->
 <div id="body" name="body">
     <center>
-        <b id="pw">Powered by <a href="https://github.com/CNZW-WTW" target="_blank" id="pwl">CNZW</a></b>
         <br>
         <b id="cdgu">
             站点所有代码由&nbsp;
-            <a id="ghl" href="https://github.com/CNZW-WTW/" target="_blank">
-                <img src="/img/icon/github.png" id="ghin">
+            <a id="ghl" href="https://github.com/CNZW-WTW" target="_blank">
+                <img src="https://avatars.githubusercontent.com/u/146963503?v=4&size=40" id="ghin">
                 CNZW-WTW
             </a>
             &nbsp;维护
@@ -56,6 +55,7 @@
             </b>
         </div>
         <br>
+        <i class="CNZWSTUDIO-BA" onclick="CNZWSTUDIO()"></i>
         <br>
         <br>
         <br>
@@ -71,6 +71,9 @@
         if (type == 'close') {
             donate_page.style = 'display: none;';
         }
+    }
+    function CNZWSTUDIO(){
+        window.open('https://github.com/CNZW-WTW/', '_blank');
     }
 </script>
 <style>
@@ -106,29 +109,6 @@
         background-size: 100%;
         border-radius: 10px;
     }
-    #pw{
-        font-size: 50px;
-        background: linear-gradient(
-            to right,
-            rgb(33, 136, 255) 0%,
-            rgb(128, 78, 218) 100%
-        );
-        background-clip: text;
-        color: transparent;
-    }
-    #pwl{
-        font-size: 50px;
-        text-decoration: none;
-        font-family: 'MC';
-        color: transparent;
-    }
-    #pwl:hover{
-        border: 
-        5px
-        rgb(0, 123, 255)
-        solid;
-        border-radius: 10px;
-    }
     #cdgu{
         font-size: 20px;
     }
@@ -150,6 +130,13 @@
         height: 100px;
         background-image: url('/img/CNZW/donate.png');
         background-size: 100%;
+    }
+    .CNZWSTUDIO-BA{
+        display: inline-block;
+        background-image: url('/img/CNZW/CNZWSTUDIO-BA.png');
+        background-size: 100%;
+        width: 250px;
+        height: 100px;
     }
 </style>
 <!---->
