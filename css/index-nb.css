@@ -12,6 +12,7 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 10px;
+    user-select: none;
 }
 #copyright{
     font-size: 17px;

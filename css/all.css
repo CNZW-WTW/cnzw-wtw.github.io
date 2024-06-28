@@ -9,3 +9,6 @@
 #waifu-tips span{
     font-family: 'MC';
 }
+footer{
+    user-select: none;
+}
