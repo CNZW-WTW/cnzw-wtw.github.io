@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <title>CNZW</title>
@@ -10,169 +11,184 @@
     <audio src="https://raw.bgithub.xyz/CNZW-WTW/audio/main/千本樱.mp3" onload autoplay loop></audio>
     <script src="https://cnzw-api.github.io/live2d-widget/autoload.js"></script>
 </head>
+
 <body>
-<div id="donate-page" class="donate-pay" style="display: none;">
-    <div class="donate-close-button" title="close" onclick="donate('close')">&times;</div>
-    <center>
-        <h2 class="donate-title">赞助 / DONATE</h2>
-        <div class="pay-img"></div>
-        <a id="dph" href="/pay" target="_blank">更多赞助方式/More Donate Way</a>
-    </center>
-</div>
-<div class="top" name="top">
-    <h1 class="top">
-        <a href="/"><img src="/img/CNZW/CNZW.png" width="250px" title="CNZW" /></a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a  href="/" title="index" id="index" class="top">首页</a>
-        <b class="top">|</b>
-        <a  href="mailto:cnzw-wtw@qq.com?subject=反馈" id="mailto" class="top">反馈</a>
-    </h1>
-</div>
-<noscript>
-    <center><p style="background-color: white;color: red;"><strong>你的浏览器不支持或已禁用JavaScript</strong></p></center>
-</noscript>
-<!---->
-<div id="body" name="body">
-    <center>
-        <br>
-        <b id="cdgu">
-            站点所有代码由&nbsp;
-            <a id="ghl" href="https://github.com/CNZW-WTW" target="_blank">
-                <img src="https://avatars.githubusercontent.com/u/146963503" id="ghin">
-                CNZW-WTW
-            </a>
-            &nbsp;维护
-        </b>
-        <br>
-        <br>
-        <br>
-        <div class="donate">
-            <a href="javascript:void(0)" class="donate" onclick="donate('open')" title="Donate Me">
-                <div class="donate"></div>
-            </a>
-            <b id="dt">
-                DONATE ME
+    <div id="donate-page" class="donate-pay" style="display: none;">
+        <div class="donate-close-button" title="close" onclick="donate('close')">&times;</div>
+        <center>
+            <h2 class="donate-title">赞助 / DONATE</h2>
+            <div class="pay-img"></div>
+            <a id="dph" href="/pay" target="_blank">更多赞助方式/More Donate Way</a>
+        </center>
+    </div>
+    <div class="top" name="top">
+        <h1 class="top">
+            <a href="/"><img src="/img/CNZW/CNZW.png" width="250px" title="CNZW" /></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/" title="index" id="index" class="top">首页</a>
+            <b class="top">|</b>
+            <a href="mailto:cnzw-wtw@qq.com?subject=反馈" id="mailto" class="top">反馈</a>
+        </h1>
+    </div>
+    <noscript>
+        <center>
+            <p style="background-color: white;color: red;"><strong>你的浏览器不支持或已禁用JavaScript</strong></p>
+        </center>
+    </noscript>
+    <!---->
+    <div id="body" name="body">
+        <center>
+            <br>
+            <b id="cdgu">
+                站点所有代码由&nbsp;
+                <a id="ghl" href="https://github.com/CNZW-WTW" target="_blank">
+                    <img src="https://avatars.githubusercontent.com/u/146963503" id="ghin">
+                    CNZW-WTW
+                </a>
+                &nbsp;维护
             </b>
-        </div>
-        <br>
-        <i class="CNZWSTUDIO-BA" onclick="CNZWSTUDIO()"></i>
-        <br>
-        <br>
-        <br>
-        <a href="https://raw.bgithub.xyz/CNZW-WTW/cnzw-wtw.github.io/main/VPN.apk" download>dl my lv cm img</a>
-    </center>
-</div>
-<script>
-    var donate_page = document.getElementById('donate-page');
-    function donate(type){
-        if (type == 'open') {
-            donate_page.style = '';
+            <br>
+            <br>
+            <br>
+            <div class="donate">
+                <a href="javascript:void(0)" class="donate" onclick="donate('open')" title="Donate Me">
+                    <div class="donate"></div>
+                </a>
+                <b id="dt">
+                    DONATE ME
+                </b>
+            </div>
+            <br>
+            <i class="CNZWSTUDIO-BA" onclick="CNZWSTUDIO()"></i>
+            <br>
+            <br>
+            <br>
+            <a href="m-l.rar" download>dl my lv cm img</a>
+        </center>
+    </div>
+    <script>
+        var donate_page = document.getElementById('donate-page');
+        function donate(type) {
+            if (type == 'open') {
+                donate_page.style = '';
+            }
+            if (type == 'close') {
+                donate_page.style = 'display: none;';
+            }
         }
-        if (type == 'close') {
-            donate_page.style = 'display: none;';
+        function CNZWSTUDIO() {
+            window.open('https://github.com/CNZW-WTW/', '_blank');
         }
-    }
-    function CNZWSTUDIO(){
-        window.open('https://github.com/CNZW-WTW/', '_blank');
-    }
-</script>
-<style>
-    #dph{
-        text-decoration: none;
-    }
-    .donate-close-button{
-        user-select: none;
-        position: fixed;
-        top: -30px;
-        right: 15px;
-        color: white;
-        font-size: 100px;
-    }
-    .donate-title{
-        color: white;
-        font-size: 50px;
-        margin-top: -1px;
-        margin-bottom: -1px;
-    }
-    .donate-pay{
-        position: fixed;
-        z-index: 2147483584;
-        width: 100%;
-        height: 130%;
-        margin-top: -25px;
-        background-color: rgba(70, 70, 70, 0.8);
-    }
-    .pay-img{
-        width: 400px;
-        height: 540px;
-        background-image: url('/img/pay/pay.jpg');
-        background-size: 100%;
-        border-radius: 10px;
-    }
-    #cdgu{
-        font-size: 20px;
-    }
-    #ghl{
-        text-decoration: none;
-        color: black;
-    }
-    #ghl:active{
-        color: rgb(0, 123, 255);
-    }
-    #ghin{
-        background-color: black;
-        width: 20px;
-        border-radius: 50%;
-        margin-bottom: -2px;
-    }
-    .donate{
-        width: 100px;
-        height: 100px;
-        background-image: url('/img/CNZW/donate.png');
-        background-size: 100%;
-    }
-    .CNZWSTUDIO-BA{
-        display: inline-block;
-        background-image: url('https://raw.bgithub.xyz/CNZW-WTW/cnzw-wtw.github.io/main/img/CNZW/CNZWSTUDIO-BA.png');
-        background-size: 100%;
-        width: 250px;
-        height: 100px;
-    }
-</style>
-<!---->
-<footer id="footer">
-    <center>
-        <hr color="black" size="3" />
-        <a href="https://github.com/CNZW-WTW/" target="_blank" title="GitHub:@CNZW-WTW" >
-            <img src="https://img.shields.io/badge/GitHub-CNZW--WTW-black" alt="GitHub:@CNZW-WTW">
-        </a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://space.bilibili.com/3493132140284888/" target="_blank" title="Bilibili:@CNZW" >
-            <img src="https://img.shields.io/badge/Bilibili-CNZW-blue" alt="Bilibili:@CNZW">
-        </a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://twitter.com/CNZW_WTW" target="_blank" title="X:@CNZW_WTW" >
-            <img src="https://img.shields.io/badge/X-CNZW__WTW-black" alt="X:@CNZW_WTW">
-        </a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://youtube.com/@CNZW-WTW" target="_blank" title="YouTube:@CNZW-WTW" >
-            <img src="https://img.shields.io/badge/YouTube-CNZW--WTW-red" alt="YouTube:@CNZW-WTW">
-        </a>
-        <br>
-        <b id="copyright"><strong>Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;CNZW. All Right Reserved</strong></b>
-        <br>
-        <div id="icp-moe">
-            <img src="https://moe.one/view/img/ico64.png" id="icp-moe-icon">
-            <a href="https://icp.gov.moe/?keyword=20245204" target="_blank" id="icp-moe-link" class="icp">
-                <span id="icp-moe-code">萌ICP备20245204号</span>
+    </script>
+    <style>
+        #dph {
+            text-decoration: none;
+        }
+
+        .donate-close-button {
+            user-select: none;
+            position: fixed;
+            top: -30px;
+            right: 15px;
+            color: white;
+            font-size: 100px;
+        }
+
+        .donate-title {
+            color: white;
+            font-size: 50px;
+            margin-top: -1px;
+            margin-bottom: -1px;
+        }
+
+        .donate-pay {
+            position: fixed;
+            z-index: 2147483584;
+            width: 100%;
+            height: 130%;
+            margin-top: -25px;
+            background-color: rgba(70, 70, 70, 0.8);
+        }
+
+        .pay-img {
+            width: 400px;
+            height: 540px;
+            background-image: url('/img/pay/pay.jpg');
+            background-size: 100%;
+            border-radius: 10px;
+        }
+
+        #cdgu {
+            font-size: 20px;
+        }
+
+        #ghl {
+            text-decoration: none;
+            color: black;
+        }
+
+        #ghl:active {
+            color: rgb(0, 123, 255);
+        }
+
+        #ghin {
+            background-color: black;
+            width: 20px;
+            border-radius: 50%;
+            margin-bottom: -2px;
+        }
+
+        .donate {
+            width: 100px;
+            height: 100px;
+            background-image: url('/img/CNZW/donate.png');
+            background-size: 100%;
+        }
+
+        .CNZWSTUDIO-BA {
+            display: inline-block;
+            background-image: url('/img/CNZW/CNZWSTUDIO-BA.png');
+            background-size: 100%;
+            width: 250px;
+            height: 100px;
+        }
+    </style>
+    <!---->
+    <footer id="footer">
+        <center>
+            <hr color="black" size="3" />
+            <a href="https://github.com/CNZW-WTW/" target="_blank" title="GitHub:@CNZW-WTW">
+                <img src="https://img.shields.io/badge/GitHub-CNZW--WTW-black" alt="GitHub:@CNZW-WTW">
             </a>
-        </div>
-        <hr color="black" size="3" />
-        <script>
-            var currentYear = new Date().getFullYear();
-            document.getElementById("Y").innerHTML = currentYear;
-        </script>
-    </center>
-</footer>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://space.bilibili.com/3493132140284888/" target="_blank" title="Bilibili:@CNZW">
+                <img src="https://img.shields.io/badge/Bilibili-CNZW-blue" alt="Bilibili:@CNZW">
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://twitter.com/CNZW_WTW" target="_blank" title="X:@CNZW_WTW">
+                <img src="https://img.shields.io/badge/X-CNZW__WTW-black" alt="X:@CNZW_WTW">
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://youtube.com/@CNZW-WTW" target="_blank" title="YouTube:@CNZW-WTW">
+                <img src="https://img.shields.io/badge/YouTube-CNZW--WTW-red" alt="YouTube:@CNZW-WTW">
+            </a>
+            <br>
+            <b id="copyright"><strong>Copyright&copy; 2023-<b id="Y">114514</b>&nbsp;CNZW. All Right
+                    Reserved</strong></b>
+            <br>
+            <div id="icp-moe">
+                <img src="https://moe.one/view/img/ico64.png" id="icp-moe-icon">
+                <a href="https://icp.gov.moe/?keyword=20245204" target="_blank" id="icp-moe-link" class="icp">
+                    <span id="icp-moe-code">萌ICP备20245204号</span>
+                </a>
+            </div>
+            <hr color="black" size="3" />
+            <script>
+                var currentYear = new Date().getFullYear();
+                document.getElementById("Y").innerHTML = currentYear;
+            </script>
+        </center>
+    </footer>
 </body>
+
 </html>
