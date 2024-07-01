@@ -28,6 +28,10 @@
             <a href="/" title="index" id="index" class="top">首页</a>
             <b class="top">|</b>
             <a href="mailto:cnzw-wtw@qq.com?subject=反馈" id="mailto" class="top">反馈</a>
+            <b class="top">|</b>
+            <a href="javascript:void(0)" class="donate" onclick="donate('open')" title="Donate Me">
+                <div class="donate"></div>
+            </a>
         </h1>
     </div>
     <noscript>
@@ -50,14 +54,6 @@
             <br>
             <br>
             <br>
-            <div class="donate">
-                <a href="javascript:void(0)" class="donate" onclick="donate('open')" title="Donate Me">
-                    <div class="donate"></div>
-                </a>
-                <b id="dt">
-                    DONATE ME
-                </b>
-            </div>
             <br>
             <i class="CNZWSTUDIO-BA" onclick="CNZWSTUDIO()"></i>
             <br>
@@ -79,7 +75,7 @@
         function CNZWSTUDIO() {
             window.open('https://github.com/CNZW-WTW/', '_blank');
         }
-        function at(){
+        function at() {
             alert('子肾FUCK YOU!');
         }
     </script>
@@ -146,6 +142,8 @@
             height: 100px;
             background-image: url('/img/CNZW/donate.png');
             background-size: 100%;
+            display: inline-block;
+            margin-bottom: -10px;
         }
 
         .CNZWSTUDIO-BA {
