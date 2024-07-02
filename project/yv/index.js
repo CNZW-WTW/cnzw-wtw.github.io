@@ -1,6 +1,6 @@
 //标题闪烁效果
 var title = document.getElementById('title'),
-    ttx = '未满18🔞禁入 在线直播 高清无码 - CNZW';
+    ttx = '未滿18🔞禁入 線上直播 高清無碼 - CNZW';
 setTimeout(function () {
     title.innerText = ttx;
 })
