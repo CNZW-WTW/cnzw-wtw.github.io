@@ -1,6 +1,6 @@
 body {
     user-select: none;
-    background-color: rgb(255, 173, 187);
+    background-color: rgb(255, 139, 158);
 }
 
 footer {
@@ -21,10 +21,12 @@ footer {
 .tat {
     text-align: center;
 }
-.button a{
+
+.button a {
     color: black;
     text-decoration: none;
 }
-.button:hover{
+
+.button:hover {
     background-color: rgba(255, 255, 255, 0.9);
 }
